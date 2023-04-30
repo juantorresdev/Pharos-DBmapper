@@ -1,6 +1,13 @@
 # PharosDBmapper
-Pharos DBmapper will provide access to the Pharos Database exposing endpoints to execute CRUD operations and criteria based queries.
+Pharos DBmapper will provide access to the Pharos Database exposing endpoints to execute CRUD operations and criteria based queries using Spring Boot.
 
+## How to run this application locally? ##
+
+1. Execute the /docker-compose.yaml file using the command:
+
+```bash
+docker-compose up
+```
 
 ## Physical model ##
 
