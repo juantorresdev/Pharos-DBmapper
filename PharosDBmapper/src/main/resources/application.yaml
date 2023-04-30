@@ -1,0 +1,20 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: PharosDBMapper
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pharosdb
+    username: username
+    password: password
+    driverClassName: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddlAuto: create-drop
+    showSql: true
+    properties:
+      hibernate:
+        format_sql: true
+      database: postgresql
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
