@@ -8,12 +8,11 @@ import lombok.*;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-@AllArgsConstructor
 @Getter
 @Setter
-@ToString
-@NoArgsConstructor
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "DOCUMENT", schema = "pharosdb")
 public class Document {
     @Id
