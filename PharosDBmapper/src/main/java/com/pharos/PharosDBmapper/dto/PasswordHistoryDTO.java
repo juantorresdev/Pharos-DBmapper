@@ -7,7 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class NationalityDTO {
+public class PasswordHistoryDTO {
     private Integer id;
-    private String nationalityval;
+    private String password;
 }

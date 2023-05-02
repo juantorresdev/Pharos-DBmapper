@@ -79,4 +79,7 @@ public class Candidate {
     @JoinColumn(name = "ADDRESS_ID")
     private Address address;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "PASSWORD_ID")
+    private PasswordHistory passwordHistory;
 }
