@@ -18,3 +18,13 @@ spring:
         format_sql: true
       database: postgresql
       database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+logging:
+  level:
+    org:
+      springframework:
+        web: trace
+      hibernate: trace
+    com:
+      pharos:
+        dbconnector: trace
