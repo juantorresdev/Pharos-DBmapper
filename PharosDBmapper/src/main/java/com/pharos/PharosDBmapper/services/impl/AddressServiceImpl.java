@@ -5,6 +5,7 @@ import com.pharos.PharosDBmapper.entities.Address;
 import com.pharos.PharosDBmapper.mappers.AddressMapper;
 import com.pharos.PharosDBmapper.repository.AddressRepository;
 import com.pharos.PharosDBmapper.services.AddressService;
+import com.pharos.PharosDBmapper.wrappers.response.AddressResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -21,43 +22,44 @@ public class AddressServiceImpl implements AddressService {
 
 
     @Override
-    public AddressDTO createAddress(AddressDTO addressDTO) throws Exception {
+    public AddressResponse createAddress(AddressDTO addressDTO) throws Exception {
+
+        log.info("Accessed to createAddress service");
 
         Address address = addressMapper.dtoToAddress(addressDTO);
         addressRepository.save(address);
 
-        addressDTO = addressMapper.addressToDto(address);
+        AddressResponse addressResponse = addressMapper.addressToResponse(address);
 
-        return addressDTO;
+        return addressMapper.addressToResponse(address);
     }
 
     @Override
-    public AddressDTO readAddress(AddressDTO addressDTO) throws Exception {
+    public AddressResponse readAddress(int addressId) throws Exception {
 
-        Address address = addressRepository.findById(addressDTO.getId()).orElseThrow();
+        Address address = addressRepository.findById(addressId).orElseThrow();
 
-        return addressMapper.addressToDto(address);
+        return addressMapper.addressToResponse(address);
     }
 
     //TODO - Read Address Method implementing JPA Criteria
 
     @Override
-    public List<AddressDTO> readAddressList(AddressDTO addressDTO) throws Exception {
+    public List<AddressResponse> readAddressList(AddressDTO addressDTO) throws Exception {
 
         List<Address> addressList = addressRepository.findAll();
-        List<AddressDTO> addressDTOList = addressMapper.addressListoToDtoList(addressList);
 
-        // TODO - Implement pagiantion
-        return addressDTOList;
+        // TODO - Implement pagenation
+        return addressMapper.addressListoToResponseList(addressList);
     }
 
     @Override
-    public AddressDTO updateAddress(AddressDTO addressDTO) throws Exception {
+    public AddressResponse updateAddress(AddressDTO addressDTO) throws Exception {
         return null;
     }
 
     @Override
-    public AddressDTO deleteAddress(AddressDTO addressDTO) throws Exception {
+    public AddressResponse deleteAddress(AddressDTO addressDTO) throws Exception {
         return null;
     }
 }
