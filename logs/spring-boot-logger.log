@@ -1,0 +1,1195 @@
+2023-05-05 21:43:19 - HV000001: Hibernate Validator 8.0.0.Final
+2023-05-05 21:43:19 - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2023-05-05 21:43:19 - Trying to load META-INF/validation.xml via TCCL
+2023-05-05 21:43:19 - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2023-05-05 21:43:19 - No META-INF/validation.xml found. Using annotation based configuration only.
+2023-05-05 21:43:19 - Found jakarta.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2023-05-05 21:43:19 - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2023-05-05 21:43:19 - Loaded expression factory via original TCCL
+2023-05-05 21:43:19 - Starting PharosDBmapperApplication using Java 17.0.7 with PID 16435 (/home/juan/Documentos/Repository/Pharos/Pharos-DBmapper/PharosDBmapper/target/classes started by juan in /home/juan/Documentos/Repository/Pharos/Pharos-DBmapper)
+2023-05-05 21:43:19 - Running with Spring Boot v3.1.0-M2, Spring v6.0.7
+2023-05-05 21:43:19 - No active profile set, falling back to 1 default profile: "default"
+2023-05-05 21:43:19 - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2023-05-05 21:43:19 - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2023-05-05 21:43:19 - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2023-05-05 21:43:19 - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2023-05-05 21:43:19 - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2023-05-05 21:43:19 - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2023-05-05 21:43:19 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-05 21:43:20 - Finished Spring Data repository scanning in 62 ms. Found 6 JPA repository interfaces.
+2023-05-05 21:43:20 - Tomcat initialized with port(s): 9999 (http)
+2023-05-05 21:43:20 - Initializing ProtocolHandler ["http-nio-9999"]
+2023-05-05 21:43:20 - Starting service [Tomcat]
+2023-05-05 21:43:20 - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-05 21:43:20 - Initializing Spring embedded WebApplicationContext
+2023-05-05 21:43:20 - Root WebApplicationContext: initialization completed in 1092 ms
+2023-05-05 21:43:20 - PersistenceUnitInfo [
+	name: default
+	persistence provider classname: null
+	classloader: jdk.internal.loader.ClassLoaders$AppClassLoader@42110406
+	excludeUnlistedClasses: true
+	JTA datasource: null
+	Non JTA datasource: HikariDataSource (null)
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/home/juan/Documentos/Repository/Pharos/Pharos-DBmapper/PharosDBmapper/target/classes/
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names [
+		com.pharos.PharosDBmapper.entities.Address
+		com.pharos.PharosDBmapper.entities.Candidate
+		com.pharos.PharosDBmapper.entities.Document
+		com.pharos.PharosDBmapper.entities.Gender
+		com.pharos.PharosDBmapper.entities.Nationality
+		com.pharos.PharosDBmapper.entities.PasswordHistory]
+	Mapping files names []
+	Properties []
+2023-05-05 21:43:20 - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2023-05-05 21:43:20 - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [jdbc] -> [org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [jta] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.JDBCTransactionFactory] -> [org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.JTATransactionFactory] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.CMTTransactionFactory] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [cte] -> [org.hibernate.query.sqm.mutation.internal.cte.CteMutationStrategy]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [global_temporary] -> [org.hibernate.query.sqm.mutation.internal.temptable.GlobalTemporaryTableMutationStrategy]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [local_temporary] -> [org.hibernate.query.sqm.mutation.internal.temptable.LocalTemporaryTableMutationStrategy]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [persistent] -> [org.hibernate.query.sqm.mutation.internal.temptable.PersistentTableMutationStrategy]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [default] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [jpa] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [legacy-jpa] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [legacy-hbm] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [component-path] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.id.enhanced.ImplicitDatabaseObjectNamingStrategy] : [standard] -> [org.hibernate.id.enhanced.StandardNamingStrategy]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.id.enhanced.ImplicitDatabaseObjectNamingStrategy] : [single] -> [org.hibernate.id.enhanced.SingleNamingStrategy]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.id.enhanced.ImplicitDatabaseObjectNamingStrategy] : [legacy] -> [org.hibernate.id.enhanced.LegacyNamingStrategy]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.cache.spi.CacheKeysFactory] : [default] -> [org.hibernate.cache.internal.DefaultCacheKeysFactory]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.cache.spi.CacheKeysFactory] : [simple] -> [org.hibernate.cache.internal.SimpleCacheKeysFactory]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.type.FormatMapper] : [jackson] -> [org.hibernate.type.jackson.JacksonJsonFormatMapper]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.type.FormatMapper] : [jsonb] -> [org.hibernate.type.jakartajson.JsonBJsonFormatMapper]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.type.FormatMapper] : [jackson-xml] -> [org.hibernate.type.jackson.JacksonXmlFormatMapper]
+2023-05-05 21:43:20 - Registering named strategy selector [org.hibernate.type.FormatMapper] : [jaxb] -> [org.hibernate.type.jaxb.JaxbXmlFormatMapper]
+2023-05-05 21:43:20 - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-05 21:43:20 - HHH000206: hibernate.properties not found
+2023-05-05 21:43:21 - Initializing service [role=org.hibernate.engine.config.spi.ConfigurationService]
+2023-05-05 21:43:21 - Initializing service [role=org.hibernate.resource.beans.spi.ManagedBeanRegistry]
+2023-05-05 21:43:21 - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2023-05-05 21:43:21 - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2023-05-05 21:43:21 - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2023-05-05 21:43:21 - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2023-05-05 21:43:21 - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2023-05-05 21:43:21 - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2023-05-05 21:43:21 - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2023-05-05 21:43:21 - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2023-05-05 21:43:21 - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2023-05-05 21:43:21 - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2023-05-05 21:43:21 - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2023-05-05 21:43:21 - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2023-05-05 21:43:21 - Initializing service [role=org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider]
+2023-05-05 21:43:21 - Initializing service [role=org.hibernate.cache.spi.RegionFactory]
+2023-05-05 21:43:21 - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+2023-05-05 21:43:21 - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2023-05-05 21:43:21 - addDescriptor(FloatTypeDescriptor) replaced previous registration(DoubleTypeDescriptor)
+2023-05-05 21:43:21 - Adding type registration boolean -> org.hibernate.type.BasicTypeReference@5a7b6b75
+2023-05-05 21:43:21 - Adding type registration boolean -> org.hibernate.type.BasicTypeReference@5a7b6b75
+2023-05-05 21:43:21 - Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@5a7b6b75
+2023-05-05 21:43:21 - Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@3719360c
+2023-05-05 21:43:21 - Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@3719360c
+2023-05-05 21:43:21 - Adding type registration true_false -> org.hibernate.type.BasicTypeReference@3afca2c
+2023-05-05 21:43:21 - Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@3afca2c
+2023-05-05 21:43:21 - Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@3855d9b2
+2023-05-05 21:43:21 - Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@3855d9b2
+2023-05-05 21:43:21 - Adding type registration byte -> org.hibernate.type.BasicTypeReference@39f42d0e
+2023-05-05 21:43:21 - Adding type registration byte -> org.hibernate.type.BasicTypeReference@39f42d0e
+2023-05-05 21:43:21 - Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@39f42d0e
+2023-05-05 21:43:21 - Adding type registration binary -> org.hibernate.type.BasicTypeReference@47a3d56a
+2023-05-05 21:43:21 - Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@47a3d56a
+2023-05-05 21:43:21 - Adding type registration [B -> org.hibernate.type.BasicTypeReference@47a3d56a
+2023-05-05 21:43:21 - Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@3a209918
+2023-05-05 21:43:21 - Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@3a209918
+2023-05-05 21:43:21 - Adding type registration Byte[] -> org.hibernate.type.BasicTypeReference@3a209918
+2023-05-05 21:43:21 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.BasicTypeReference@3a209918
+2023-05-05 21:43:21 - Adding type registration image -> org.hibernate.type.BasicTypeReference@2cae5fa7
+2023-05-05 21:43:21 - Adding type registration blob -> org.hibernate.type.BasicTypeReference@34aa8b61
+2023-05-05 21:43:21 - Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@34aa8b61
+2023-05-05 21:43:21 - Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@6d7b001b
+2023-05-05 21:43:21 - Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@532dacf5
+2023-05-05 21:43:21 - Adding type registration short -> org.hibernate.type.BasicTypeReference@da09250
+2023-05-05 21:43:21 - Adding type registration short -> org.hibernate.type.BasicTypeReference@da09250
+2023-05-05 21:43:21 - Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@da09250
+2023-05-05 21:43:21 - Adding type registration integer -> org.hibernate.type.BasicTypeReference@6d31f106
+2023-05-05 21:43:21 - Adding type registration int -> org.hibernate.type.BasicTypeReference@6d31f106
+2023-05-05 21:43:21 - Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@6d31f106
+2023-05-05 21:43:21 - Adding type registration long -> org.hibernate.type.BasicTypeReference@587f4f63
+2023-05-05 21:43:21 - Adding type registration long -> org.hibernate.type.BasicTypeReference@587f4f63
+2023-05-05 21:43:21 - Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@587f4f63
+2023-05-05 21:43:21 - Adding type registration float -> org.hibernate.type.BasicTypeReference@660b1a9d
+2023-05-05 21:43:21 - Adding type registration float -> org.hibernate.type.BasicTypeReference@660b1a9d
+2023-05-05 21:43:21 - Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@660b1a9d
+2023-05-05 21:43:21 - Adding type registration double -> org.hibernate.type.BasicTypeReference@6fb0261e
+2023-05-05 21:43:21 - Adding type registration double -> org.hibernate.type.BasicTypeReference@6fb0261e
+2023-05-05 21:43:21 - Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@6fb0261e
+2023-05-05 21:43:21 - Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@d6b532f
+2023-05-05 21:43:21 - Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@d6b532f
+2023-05-05 21:43:21 - Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@2f4d01b6
+2023-05-05 21:43:21 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@2f4d01b6
+2023-05-05 21:43:21 - Adding type registration character -> org.hibernate.type.BasicTypeReference@112c2930
+2023-05-05 21:43:21 - Adding type registration char -> org.hibernate.type.BasicTypeReference@112c2930
+2023-05-05 21:43:21 - Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@112c2930
+2023-05-05 21:43:21 - Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@7f426ddd
+2023-05-05 21:43:21 - Adding type registration string -> org.hibernate.type.BasicTypeReference@28e7bb31
+2023-05-05 21:43:21 - Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@28e7bb31
+2023-05-05 21:43:21 - Adding type registration nstring -> org.hibernate.type.BasicTypeReference@6fe04f2a
+2023-05-05 21:43:21 - Adding type registration characters -> org.hibernate.type.BasicTypeReference@1f758e4f
+2023-05-05 21:43:21 - Adding type registration char[] -> org.hibernate.type.BasicTypeReference@1f758e4f
+2023-05-05 21:43:21 - Adding type registration [C -> org.hibernate.type.BasicTypeReference@1f758e4f
+2023-05-05 21:43:21 - Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@733534f9
+2023-05-05 21:43:21 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.BasicTypeReference@733534f9
+2023-05-05 21:43:21 - Adding type registration Character[] -> org.hibernate.type.BasicTypeReference@733534f9
+2023-05-05 21:43:21 - Adding type registration text -> org.hibernate.type.BasicTypeReference@661e279d
+2023-05-05 21:43:21 - Adding type registration ntext -> org.hibernate.type.BasicTypeReference@beabd6b
+2023-05-05 21:43:21 - Adding type registration clob -> org.hibernate.type.BasicTypeReference@38de5daf
+2023-05-05 21:43:21 - Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@38de5daf
+2023-05-05 21:43:21 - Adding type registration nclob -> org.hibernate.type.BasicTypeReference@621624b1
+2023-05-05 21:43:21 - Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@621624b1
+2023-05-05 21:43:21 - Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@7523d5a1
+2023-05-05 21:43:21 - Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@2bfc2f8b
+2023-05-05 21:43:21 - Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@61853c7e
+2023-05-05 21:43:21 - Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@32e5af53
+2023-05-05 21:43:21 - Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@5980fa73
+2023-05-05 21:43:21 - Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@13ca16bf
+2023-05-05 21:43:21 - Adding type registration Duration -> org.hibernate.type.BasicTypeReference@5be4be74
+2023-05-05 21:43:21 - Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@5be4be74
+2023-05-05 21:43:21 - Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@44641d6c
+2023-05-05 21:43:21 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@44641d6c
+2023-05-05 21:43:21 - Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@1ae924f1
+2023-05-05 21:43:21 - Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@1ae924f1
+2023-05-05 21:43:21 - Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@59d5a6fd
+2023-05-05 21:43:21 - Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@59d5a6fd
+2023-05-05 21:43:21 - Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@27bcb4ad
+2023-05-05 21:43:21 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@27bcb4ad
+2023-05-05 21:43:21 - Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@4357524b
+2023-05-05 21:43:21 - Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@104a287c
+2023-05-05 21:43:21 - Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@64dc86c6
+2023-05-05 21:43:21 - Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@64dc86c6
+2023-05-05 21:43:21 - Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@26874f2c
+2023-05-05 21:43:21 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@26874f2c
+2023-05-05 21:43:21 - Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@5f3b84bd
+2023-05-05 21:43:21 - Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@1e734eee
+2023-05-05 21:43:21 - Adding type registration date -> org.hibernate.type.BasicTypeReference@1e191150
+2023-05-05 21:43:21 - Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@1e191150
+2023-05-05 21:43:21 - Adding type registration time -> org.hibernate.type.BasicTypeReference@2fbd390
+2023-05-05 21:43:21 - Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@2fbd390
+2023-05-05 21:43:21 - Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@166b11e
+2023-05-05 21:43:21 - Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@166b11e
+2023-05-05 21:43:21 - Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@166b11e
+2023-05-05 21:43:21 - Adding type registration calendar -> org.hibernate.type.BasicTypeReference@5e68be2
+2023-05-05 21:43:21 - Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@5e68be2
+2023-05-05 21:43:21 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@5e68be2
+2023-05-05 21:43:21 - Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@5323999f
+2023-05-05 21:43:21 - Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@f18b738
+2023-05-05 21:43:21 - Adding type registration instant -> org.hibernate.type.BasicTypeReference@3bc20984
+2023-05-05 21:43:21 - Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@3bc20984
+2023-05-05 21:43:21 - Adding type registration uuid -> org.hibernate.type.BasicTypeReference@aca3c85
+2023-05-05 21:43:21 - Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@aca3c85
+2023-05-05 21:43:21 - Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@aca3c85
+2023-05-05 21:43:21 - Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@45eab322
+2023-05-05 21:43:21 - Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@f017dd0
+2023-05-05 21:43:21 - Adding type registration class -> org.hibernate.type.BasicTypeReference@2424cb9d
+2023-05-05 21:43:21 - Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@2424cb9d
+2023-05-05 21:43:21 - Adding type registration currency -> org.hibernate.type.BasicTypeReference@7f51f588
+2023-05-05 21:43:21 - Adding type registration Currency -> org.hibernate.type.BasicTypeReference@7f51f588
+2023-05-05 21:43:21 - Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@7f51f588
+2023-05-05 21:43:21 - Adding type registration locale -> org.hibernate.type.BasicTypeReference@6fb22ae3
+2023-05-05 21:43:21 - Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@6fb22ae3
+2023-05-05 21:43:21 - Adding type registration serializable -> org.hibernate.type.BasicTypeReference@6bd92538
+2023-05-05 21:43:21 - Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@6bd92538
+2023-05-05 21:43:21 - Adding type registration timezone -> org.hibernate.type.BasicTypeReference@69a373fd
+2023-05-05 21:43:21 - Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@69a373fd
+2023-05-05 21:43:21 - Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@19ae36f4
+2023-05-05 21:43:21 - Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@19ae36f4
+2023-05-05 21:43:21 - Adding type registration url -> org.hibernate.type.BasicTypeReference@6735f210
+2023-05-05 21:43:21 - Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@6735f210
+2023-05-05 21:43:21 - Adding type registration row_version -> org.hibernate.type.BasicTypeReference@4567fb2b
+2023-05-05 21:43:21 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@1b409a79
+2023-05-05 21:43:21 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@1b409a79
+2023-05-05 21:43:21 - Adding type registration object -> org.hibernate.type.JavaObjectType@72224107
+2023-05-05 21:43:21 - Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@72224107
+2023-05-05 21:43:21 - Adding type registration null -> org.hibernate.type.NullType@1f7e52d1
+2023-05-05 21:43:21 - Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@e01a26b
+2023-05-05 21:43:21 - Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@7604198a
+2023-05-05 21:43:21 - Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@5cce40d7
+2023-05-05 21:43:21 - Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@314b7945
+2023-05-05 21:43:21 - Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@32da97fd
+2023-05-05 21:43:21 - Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@64440065
+2023-05-05 21:43:21 - Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@4aa22cc2
+2023-05-05 21:43:21 - Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@2049e582
+2023-05-05 21:43:21 - Initializing service [role=org.hibernate.boot.cfgxml.spi.CfgXmlAccessService]
+2023-05-05 21:43:21 - Injecting JPA temp ClassLoader [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@3e52ed5d] into BootstrapContext; was [null]
+2023-05-05 21:43:21 - ClassLoaderAccessImpl#injectTempClassLoader(org.springframework.instrument.classloading.SimpleThrowawayClassLoader@3e52ed5d) [was null]
+2023-05-05 21:43:21 - Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@482a58c7] into BootstrapContext; was [null]
+2023-05-05 21:43:21 - Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@3e74fd84] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@147efd9]
+2023-05-05 21:43:21 - Injecting JPA temp ClassLoader [null] into BootstrapContext; was [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@3e52ed5d]
+2023-05-05 21:43:21 - ClassLoaderAccessImpl#injectTempClassLoader(null) [was org.springframework.instrument.classloading.SimpleThrowawayClassLoader@3e52ed5d]
+2023-05-05 21:43:21 - Initializing service [role=org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-05-05 21:43:21 - Initializing service [role=org.hibernate.engine.jdbc.dialect.spi.DialectFactory]
+2023-05-05 21:43:21 - Initializing service [role=org.hibernate.engine.jdbc.dialect.spi.DialectResolver]
+2023-05-05 21:43:21 - Initializing service [role=org.hibernate.engine.jdbc.connections.spi.ConnectionProvider]
+2023-05-05 21:43:21 - Initializing service [role=org.hibernate.engine.jndi.spi.JndiService]
+2023-05-05 21:43:21 - HikariPool-1 - Starting...
+2023-05-05 21:43:22 - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "pharos-root-user"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+	at org.postgresql.Driver.makeConnection(Driver.java:443)
+	at org.postgresql.Driver.connect(Driver.java:297)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.pharos.PharosDBmapper.PharosDBmapperApplication.main(PharosDBmapperApplication.java:10)
+2023-05-05 21:43:22 - HHH000342: Could not obtain connection to query metadata
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "pharos-root-user"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+	at org.postgresql.Driver.makeConnection(Driver.java:443)
+	at org.postgresql.Driver.connect(Driver.java:297)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.pharos.PharosDBmapper.PharosDBmapperApplication.main(PharosDBmapperApplication.java:10)
+2023-05-05 21:43:22 - Overriding existing service binding [org.hibernate.engine.jdbc.connections.spi.ConnectionProvider]
+2023-05-05 21:43:22 - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-05-05 21:43:22 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-05-05 21:43:22 - Stopping service [Tomcat]
+2023-05-05 21:43:22 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-05-05 21:43:22 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.pharos.PharosDBmapper.PharosDBmapperApplication.main(PharosDBmapperApplication.java:10)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:267)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 16 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:147)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:60)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:244)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	... 31 common frames omitted
+2023-05-05 21:57:10 - HV000001: Hibernate Validator 8.0.0.Final
+2023-05-05 21:57:10 - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2023-05-05 21:57:10 - Trying to load META-INF/validation.xml via TCCL
+2023-05-05 21:57:10 - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2023-05-05 21:57:10 - No META-INF/validation.xml found. Using annotation based configuration only.
+2023-05-05 21:57:10 - Found jakarta.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2023-05-05 21:57:10 - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2023-05-05 21:57:10 - Loaded expression factory via original TCCL
+2023-05-05 21:57:10 - Starting PharosDBmapperApplication using Java 17.0.7 with PID 23063 (/home/juan/Documentos/Repository/Pharos/Pharos-DBmapper/PharosDBmapper/target/classes started by juan in /home/juan/Documentos/Repository/Pharos/Pharos-DBmapper)
+2023-05-05 21:57:10 - Running with Spring Boot v3.1.0-M2, Spring v6.0.7
+2023-05-05 21:57:10 - No active profile set, falling back to 1 default profile: "default"
+2023-05-05 21:57:10 - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2023-05-05 21:57:10 - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2023-05-05 21:57:10 - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2023-05-05 21:57:10 - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2023-05-05 21:57:10 - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2023-05-05 21:57:10 - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2023-05-05 21:57:10 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-05 21:57:10 - Finished Spring Data repository scanning in 57 ms. Found 6 JPA repository interfaces.
+2023-05-05 21:57:11 - Tomcat initialized with port(s): 9999 (http)
+2023-05-05 21:57:11 - Initializing ProtocolHandler ["http-nio-9999"]
+2023-05-05 21:57:11 - Starting service [Tomcat]
+2023-05-05 21:57:11 - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-05 21:57:11 - Initializing Spring embedded WebApplicationContext
+2023-05-05 21:57:11 - Root WebApplicationContext: initialization completed in 933 ms
+2023-05-05 21:57:11 - PersistenceUnitInfo [
+	name: default
+	persistence provider classname: null
+	classloader: jdk.internal.loader.ClassLoaders$AppClassLoader@42110406
+	excludeUnlistedClasses: true
+	JTA datasource: null
+	Non JTA datasource: HikariDataSource (null)
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/home/juan/Documentos/Repository/Pharos/Pharos-DBmapper/PharosDBmapper/target/classes/
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names [
+		com.pharos.PharosDBmapper.entities.Address
+		com.pharos.PharosDBmapper.entities.Candidate
+		com.pharos.PharosDBmapper.entities.Document
+		com.pharos.PharosDBmapper.entities.Gender
+		com.pharos.PharosDBmapper.entities.Nationality
+		com.pharos.PharosDBmapper.entities.PasswordHistory]
+	Mapping files names []
+	Properties []
+2023-05-05 21:57:11 - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2023-05-05 21:57:11 - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [jdbc] -> [org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [jta] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.JDBCTransactionFactory] -> [org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.JTATransactionFactory] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.CMTTransactionFactory] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [cte] -> [org.hibernate.query.sqm.mutation.internal.cte.CteMutationStrategy]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [global_temporary] -> [org.hibernate.query.sqm.mutation.internal.temptable.GlobalTemporaryTableMutationStrategy]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [local_temporary] -> [org.hibernate.query.sqm.mutation.internal.temptable.LocalTemporaryTableMutationStrategy]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [persistent] -> [org.hibernate.query.sqm.mutation.internal.temptable.PersistentTableMutationStrategy]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [default] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [jpa] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [legacy-jpa] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [legacy-hbm] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [component-path] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.id.enhanced.ImplicitDatabaseObjectNamingStrategy] : [standard] -> [org.hibernate.id.enhanced.StandardNamingStrategy]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.id.enhanced.ImplicitDatabaseObjectNamingStrategy] : [single] -> [org.hibernate.id.enhanced.SingleNamingStrategy]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.id.enhanced.ImplicitDatabaseObjectNamingStrategy] : [legacy] -> [org.hibernate.id.enhanced.LegacyNamingStrategy]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.cache.spi.CacheKeysFactory] : [default] -> [org.hibernate.cache.internal.DefaultCacheKeysFactory]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.cache.spi.CacheKeysFactory] : [simple] -> [org.hibernate.cache.internal.SimpleCacheKeysFactory]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.type.FormatMapper] : [jackson] -> [org.hibernate.type.jackson.JacksonJsonFormatMapper]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.type.FormatMapper] : [jsonb] -> [org.hibernate.type.jakartajson.JsonBJsonFormatMapper]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.type.FormatMapper] : [jackson-xml] -> [org.hibernate.type.jackson.JacksonXmlFormatMapper]
+2023-05-05 21:57:11 - Registering named strategy selector [org.hibernate.type.FormatMapper] : [jaxb] -> [org.hibernate.type.jaxb.JaxbXmlFormatMapper]
+2023-05-05 21:57:11 - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-05 21:57:11 - HHH000206: hibernate.properties not found
+2023-05-05 21:57:11 - Initializing service [role=org.hibernate.engine.config.spi.ConfigurationService]
+2023-05-05 21:57:11 - Initializing service [role=org.hibernate.resource.beans.spi.ManagedBeanRegistry]
+2023-05-05 21:57:11 - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2023-05-05 21:57:11 - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2023-05-05 21:57:11 - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2023-05-05 21:57:11 - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2023-05-05 21:57:11 - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2023-05-05 21:57:11 - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2023-05-05 21:57:11 - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2023-05-05 21:57:11 - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2023-05-05 21:57:11 - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2023-05-05 21:57:11 - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2023-05-05 21:57:11 - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2023-05-05 21:57:11 - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2023-05-05 21:57:11 - Initializing service [role=org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider]
+2023-05-05 21:57:11 - Initializing service [role=org.hibernate.cache.spi.RegionFactory]
+2023-05-05 21:57:11 - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+2023-05-05 21:57:11 - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2023-05-05 21:57:11 - addDescriptor(FloatTypeDescriptor) replaced previous registration(DoubleTypeDescriptor)
+2023-05-05 21:57:11 - Adding type registration boolean -> org.hibernate.type.BasicTypeReference@47a3d56a
+2023-05-05 21:57:11 - Adding type registration boolean -> org.hibernate.type.BasicTypeReference@47a3d56a
+2023-05-05 21:57:11 - Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@47a3d56a
+2023-05-05 21:57:11 - Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@3a209918
+2023-05-05 21:57:11 - Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@3a209918
+2023-05-05 21:57:11 - Adding type registration true_false -> org.hibernate.type.BasicTypeReference@2cae5fa7
+2023-05-05 21:57:11 - Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@2cae5fa7
+2023-05-05 21:57:11 - Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@34aa8b61
+2023-05-05 21:57:11 - Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@34aa8b61
+2023-05-05 21:57:11 - Adding type registration byte -> org.hibernate.type.BasicTypeReference@6d7b001b
+2023-05-05 21:57:11 - Adding type registration byte -> org.hibernate.type.BasicTypeReference@6d7b001b
+2023-05-05 21:57:11 - Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@6d7b001b
+2023-05-05 21:57:11 - Adding type registration binary -> org.hibernate.type.BasicTypeReference@532dacf5
+2023-05-05 21:57:11 - Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@532dacf5
+2023-05-05 21:57:11 - Adding type registration [B -> org.hibernate.type.BasicTypeReference@532dacf5
+2023-05-05 21:57:11 - Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@da09250
+2023-05-05 21:57:11 - Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@da09250
+2023-05-05 21:57:11 - Adding type registration Byte[] -> org.hibernate.type.BasicTypeReference@da09250
+2023-05-05 21:57:11 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.BasicTypeReference@da09250
+2023-05-05 21:57:11 - Adding type registration image -> org.hibernate.type.BasicTypeReference@6d31f106
+2023-05-05 21:57:11 - Adding type registration blob -> org.hibernate.type.BasicTypeReference@587f4f63
+2023-05-05 21:57:11 - Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@587f4f63
+2023-05-05 21:57:11 - Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@660b1a9d
+2023-05-05 21:57:11 - Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@6fb0261e
+2023-05-05 21:57:11 - Adding type registration short -> org.hibernate.type.BasicTypeReference@d6b532f
+2023-05-05 21:57:11 - Adding type registration short -> org.hibernate.type.BasicTypeReference@d6b532f
+2023-05-05 21:57:11 - Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@d6b532f
+2023-05-05 21:57:11 - Adding type registration integer -> org.hibernate.type.BasicTypeReference@2f4d01b6
+2023-05-05 21:57:11 - Adding type registration int -> org.hibernate.type.BasicTypeReference@2f4d01b6
+2023-05-05 21:57:11 - Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@2f4d01b6
+2023-05-05 21:57:11 - Adding type registration long -> org.hibernate.type.BasicTypeReference@112c2930
+2023-05-05 21:57:11 - Adding type registration long -> org.hibernate.type.BasicTypeReference@112c2930
+2023-05-05 21:57:11 - Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@112c2930
+2023-05-05 21:57:11 - Adding type registration float -> org.hibernate.type.BasicTypeReference@7f426ddd
+2023-05-05 21:57:11 - Adding type registration float -> org.hibernate.type.BasicTypeReference@7f426ddd
+2023-05-05 21:57:11 - Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@7f426ddd
+2023-05-05 21:57:11 - Adding type registration double -> org.hibernate.type.BasicTypeReference@28e7bb31
+2023-05-05 21:57:11 - Adding type registration double -> org.hibernate.type.BasicTypeReference@28e7bb31
+2023-05-05 21:57:11 - Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@28e7bb31
+2023-05-05 21:57:11 - Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@6fe04f2a
+2023-05-05 21:57:11 - Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@6fe04f2a
+2023-05-05 21:57:11 - Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@1f758e4f
+2023-05-05 21:57:11 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@1f758e4f
+2023-05-05 21:57:11 - Adding type registration character -> org.hibernate.type.BasicTypeReference@733534f9
+2023-05-05 21:57:11 - Adding type registration char -> org.hibernate.type.BasicTypeReference@733534f9
+2023-05-05 21:57:11 - Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@733534f9
+2023-05-05 21:57:11 - Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@661e279d
+2023-05-05 21:57:11 - Adding type registration string -> org.hibernate.type.BasicTypeReference@beabd6b
+2023-05-05 21:57:11 - Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@beabd6b
+2023-05-05 21:57:11 - Adding type registration nstring -> org.hibernate.type.BasicTypeReference@38de5daf
+2023-05-05 21:57:11 - Adding type registration characters -> org.hibernate.type.BasicTypeReference@621624b1
+2023-05-05 21:57:11 - Adding type registration char[] -> org.hibernate.type.BasicTypeReference@621624b1
+2023-05-05 21:57:11 - Adding type registration [C -> org.hibernate.type.BasicTypeReference@621624b1
+2023-05-05 21:57:11 - Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@7523d5a1
+2023-05-05 21:57:11 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.BasicTypeReference@7523d5a1
+2023-05-05 21:57:11 - Adding type registration Character[] -> org.hibernate.type.BasicTypeReference@7523d5a1
+2023-05-05 21:57:11 - Adding type registration text -> org.hibernate.type.BasicTypeReference@2bfc2f8b
+2023-05-05 21:57:11 - Adding type registration ntext -> org.hibernate.type.BasicTypeReference@61853c7e
+2023-05-05 21:57:11 - Adding type registration clob -> org.hibernate.type.BasicTypeReference@32e5af53
+2023-05-05 21:57:11 - Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@32e5af53
+2023-05-05 21:57:11 - Adding type registration nclob -> org.hibernate.type.BasicTypeReference@5980fa73
+2023-05-05 21:57:11 - Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@5980fa73
+2023-05-05 21:57:11 - Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@13ca16bf
+2023-05-05 21:57:11 - Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@5be4be74
+2023-05-05 21:57:11 - Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@44641d6c
+2023-05-05 21:57:11 - Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@1ae924f1
+2023-05-05 21:57:11 - Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@59d5a6fd
+2023-05-05 21:57:11 - Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@27bcb4ad
+2023-05-05 21:57:11 - Adding type registration Duration -> org.hibernate.type.BasicTypeReference@4357524b
+2023-05-05 21:57:11 - Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@4357524b
+2023-05-05 21:57:11 - Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@104a287c
+2023-05-05 21:57:11 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@104a287c
+2023-05-05 21:57:11 - Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@64dc86c6
+2023-05-05 21:57:11 - Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@64dc86c6
+2023-05-05 21:57:11 - Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@26874f2c
+2023-05-05 21:57:11 - Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@26874f2c
+2023-05-05 21:57:11 - Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@5f3b84bd
+2023-05-05 21:57:11 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@5f3b84bd
+2023-05-05 21:57:11 - Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@1e734eee
+2023-05-05 21:57:11 - Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@1e191150
+2023-05-05 21:57:11 - Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@2fbd390
+2023-05-05 21:57:11 - Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@2fbd390
+2023-05-05 21:57:11 - Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@166b11e
+2023-05-05 21:57:11 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@166b11e
+2023-05-05 21:57:11 - Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@5e68be2
+2023-05-05 21:57:11 - Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@5323999f
+2023-05-05 21:57:11 - Adding type registration date -> org.hibernate.type.BasicTypeReference@f18b738
+2023-05-05 21:57:11 - Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@f18b738
+2023-05-05 21:57:11 - Adding type registration time -> org.hibernate.type.BasicTypeReference@3bc20984
+2023-05-05 21:57:11 - Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@3bc20984
+2023-05-05 21:57:11 - Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@aca3c85
+2023-05-05 21:57:11 - Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@aca3c85
+2023-05-05 21:57:11 - Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@aca3c85
+2023-05-05 21:57:11 - Adding type registration calendar -> org.hibernate.type.BasicTypeReference@45eab322
+2023-05-05 21:57:11 - Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@45eab322
+2023-05-05 21:57:11 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@45eab322
+2023-05-05 21:57:11 - Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@f017dd0
+2023-05-05 21:57:11 - Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@2424cb9d
+2023-05-05 21:57:11 - Adding type registration instant -> org.hibernate.type.BasicTypeReference@7f51f588
+2023-05-05 21:57:11 - Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@7f51f588
+2023-05-05 21:57:11 - Adding type registration uuid -> org.hibernate.type.BasicTypeReference@6fb22ae3
+2023-05-05 21:57:11 - Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@6fb22ae3
+2023-05-05 21:57:11 - Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@6fb22ae3
+2023-05-05 21:57:11 - Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@6bd92538
+2023-05-05 21:57:11 - Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@69a373fd
+2023-05-05 21:57:11 - Adding type registration class -> org.hibernate.type.BasicTypeReference@19ae36f4
+2023-05-05 21:57:11 - Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@19ae36f4
+2023-05-05 21:57:11 - Adding type registration currency -> org.hibernate.type.BasicTypeReference@6735f210
+2023-05-05 21:57:11 - Adding type registration Currency -> org.hibernate.type.BasicTypeReference@6735f210
+2023-05-05 21:57:11 - Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@6735f210
+2023-05-05 21:57:11 - Adding type registration locale -> org.hibernate.type.BasicTypeReference@4567fb2b
+2023-05-05 21:57:11 - Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@4567fb2b
+2023-05-05 21:57:11 - Adding type registration serializable -> org.hibernate.type.BasicTypeReference@372954e1
+2023-05-05 21:57:11 - Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@372954e1
+2023-05-05 21:57:11 - Adding type registration timezone -> org.hibernate.type.BasicTypeReference@5fd8dd66
+2023-05-05 21:57:11 - Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@5fd8dd66
+2023-05-05 21:57:11 - Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@173511ff
+2023-05-05 21:57:11 - Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@173511ff
+2023-05-05 21:57:11 - Adding type registration url -> org.hibernate.type.BasicTypeReference@6df11e91
+2023-05-05 21:57:11 - Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@6df11e91
+2023-05-05 21:57:11 - Adding type registration row_version -> org.hibernate.type.BasicTypeReference@1002d192
+2023-05-05 21:57:11 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@3a45afd4
+2023-05-05 21:57:11 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@3a45afd4
+2023-05-05 21:57:11 - Adding type registration object -> org.hibernate.type.JavaObjectType@1689527c
+2023-05-05 21:57:11 - Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@1689527c
+2023-05-05 21:57:11 - Adding type registration null -> org.hibernate.type.NullType@32da97fd
+2023-05-05 21:57:11 - Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@64440065
+2023-05-05 21:57:11 - Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@4aa22cc2
+2023-05-05 21:57:11 - Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@2049e582
+2023-05-05 21:57:11 - Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@464aeb09
+2023-05-05 21:57:11 - Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@2c99c8d
+2023-05-05 21:57:11 - Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@59d6642a
+2023-05-05 21:57:11 - Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@365cef67
+2023-05-05 21:57:11 - Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@27df5806
+2023-05-05 21:57:11 - Initializing service [role=org.hibernate.boot.cfgxml.spi.CfgXmlAccessService]
+2023-05-05 21:57:11 - Injecting JPA temp ClassLoader [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@482a58c7] into BootstrapContext; was [null]
+2023-05-05 21:57:11 - ClassLoaderAccessImpl#injectTempClassLoader(org.springframework.instrument.classloading.SimpleThrowawayClassLoader@482a58c7) [was null]
+2023-05-05 21:57:11 - Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@1de5cc88] into BootstrapContext; was [null]
+2023-05-05 21:57:11 - Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@23e2c1ca] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@2d4fb0d8]
+2023-05-05 21:57:11 - Injecting JPA temp ClassLoader [null] into BootstrapContext; was [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@482a58c7]
+2023-05-05 21:57:11 - ClassLoaderAccessImpl#injectTempClassLoader(null) [was org.springframework.instrument.classloading.SimpleThrowawayClassLoader@482a58c7]
+2023-05-05 21:57:11 - Initializing service [role=org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-05-05 21:57:11 - Initializing service [role=org.hibernate.engine.jdbc.dialect.spi.DialectFactory]
+2023-05-05 21:57:11 - Initializing service [role=org.hibernate.engine.jdbc.dialect.spi.DialectResolver]
+2023-05-05 21:57:11 - Initializing service [role=org.hibernate.engine.jdbc.connections.spi.ConnectionProvider]
+2023-05-05 21:57:11 - Initializing service [role=org.hibernate.engine.jndi.spi.JndiService]
+2023-05-05 21:57:11 - HikariPool-1 - Starting...
+2023-05-05 21:57:12 - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: FATAL: database "pharosdb" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2825)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:175)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:313)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+	at org.postgresql.Driver.makeConnection(Driver.java:443)
+	at org.postgresql.Driver.connect(Driver.java:297)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.pharos.PharosDBmapper.PharosDBmapperApplication.main(PharosDBmapperApplication.java:10)
+2023-05-05 21:57:12 - HHH000342: Could not obtain connection to query metadata
+org.postgresql.util.PSQLException: FATAL: database "pharosdb" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2825)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:175)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:313)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+	at org.postgresql.Driver.makeConnection(Driver.java:443)
+	at org.postgresql.Driver.connect(Driver.java:297)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.pharos.PharosDBmapper.PharosDBmapperApplication.main(PharosDBmapperApplication.java:10)
+2023-05-05 21:57:12 - Overriding existing service binding [org.hibernate.engine.jdbc.connections.spi.ConnectionProvider]
+2023-05-05 21:57:12 - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-05-05 21:57:12 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-05-05 21:57:12 - Stopping service [Tomcat]
+2023-05-05 21:57:12 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-05-05 21:57:12 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.pharos.PharosDBmapper.PharosDBmapperApplication.main(PharosDBmapperApplication.java:10)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:267)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 16 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:147)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:60)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:244)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	... 31 common frames omitted
+2023-05-05 23:03:28 - HV000001: Hibernate Validator 8.0.0.Final
+2023-05-05 23:03:28 - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2023-05-05 23:03:28 - Trying to load META-INF/validation.xml via TCCL
+2023-05-05 23:03:28 - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2023-05-05 23:03:28 - No META-INF/validation.xml found. Using annotation based configuration only.
+2023-05-05 23:03:28 - Found jakarta.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2023-05-05 23:03:28 - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2023-05-05 23:03:28 - Loaded expression factory via original TCCL
+2023-05-05 23:03:28 - Starting PharosDBmapperApplication using Java 17.0.7 with PID 46040 (/home/juan/Documentos/Repository/Pharos/Pharos-DBmapper/PharosDBmapper/target/classes started by juan in /home/juan/Documentos/Repository/Pharos/Pharos-DBmapper)
+2023-05-05 23:03:28 - Running with Spring Boot v3.1.0-M2, Spring v6.0.7
+2023-05-05 23:03:28 - No active profile set, falling back to 1 default profile: "default"
+2023-05-05 23:03:28 - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2023-05-05 23:03:28 - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2023-05-05 23:03:28 - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2023-05-05 23:03:28 - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2023-05-05 23:03:28 - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2023-05-05 23:03:28 - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2023-05-05 23:03:28 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-05 23:03:28 - Finished Spring Data repository scanning in 62 ms. Found 6 JPA repository interfaces.
+2023-05-05 23:03:29 - Tomcat initialized with port(s): 9999 (http)
+2023-05-05 23:03:29 - Initializing ProtocolHandler ["http-nio-9999"]
+2023-05-05 23:03:29 - Starting service [Tomcat]
+2023-05-05 23:03:29 - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-05 23:03:29 - Initializing Spring embedded WebApplicationContext
+2023-05-05 23:03:29 - Root WebApplicationContext: initialization completed in 996 ms
+2023-05-05 23:03:29 - PersistenceUnitInfo [
+	name: default
+	persistence provider classname: null
+	classloader: jdk.internal.loader.ClassLoaders$AppClassLoader@42110406
+	excludeUnlistedClasses: true
+	JTA datasource: null
+	Non JTA datasource: HikariDataSource (null)
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/home/juan/Documentos/Repository/Pharos/Pharos-DBmapper/PharosDBmapper/target/classes/
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names [
+		com.pharos.PharosDBmapper.entities.Address
+		com.pharos.PharosDBmapper.entities.Candidate
+		com.pharos.PharosDBmapper.entities.Document
+		com.pharos.PharosDBmapper.entities.Gender
+		com.pharos.PharosDBmapper.entities.Nationality
+		com.pharos.PharosDBmapper.entities.PasswordHistory]
+	Mapping files names []
+	Properties []
+2023-05-05 23:03:29 - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2023-05-05 23:03:29 - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [jdbc] -> [org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [jta] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.JDBCTransactionFactory] -> [org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.JTATransactionFactory] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.CMTTransactionFactory] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [cte] -> [org.hibernate.query.sqm.mutation.internal.cte.CteMutationStrategy]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [global_temporary] -> [org.hibernate.query.sqm.mutation.internal.temptable.GlobalTemporaryTableMutationStrategy]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [local_temporary] -> [org.hibernate.query.sqm.mutation.internal.temptable.LocalTemporaryTableMutationStrategy]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.query.sqm.mutation.spi.SqmMultiTableMutationStrategy] : [persistent] -> [org.hibernate.query.sqm.mutation.internal.temptable.PersistentTableMutationStrategy]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [default] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [jpa] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [legacy-jpa] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [legacy-hbm] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [component-path] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.id.enhanced.ImplicitDatabaseObjectNamingStrategy] : [standard] -> [org.hibernate.id.enhanced.StandardNamingStrategy]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.id.enhanced.ImplicitDatabaseObjectNamingStrategy] : [single] -> [org.hibernate.id.enhanced.SingleNamingStrategy]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.id.enhanced.ImplicitDatabaseObjectNamingStrategy] : [legacy] -> [org.hibernate.id.enhanced.LegacyNamingStrategy]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.cache.spi.CacheKeysFactory] : [default] -> [org.hibernate.cache.internal.DefaultCacheKeysFactory]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.cache.spi.CacheKeysFactory] : [simple] -> [org.hibernate.cache.internal.SimpleCacheKeysFactory]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.type.FormatMapper] : [jackson] -> [org.hibernate.type.jackson.JacksonJsonFormatMapper]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.type.FormatMapper] : [jsonb] -> [org.hibernate.type.jakartajson.JsonBJsonFormatMapper]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.type.FormatMapper] : [jackson-xml] -> [org.hibernate.type.jackson.JacksonXmlFormatMapper]
+2023-05-05 23:03:29 - Registering named strategy selector [org.hibernate.type.FormatMapper] : [jaxb] -> [org.hibernate.type.jaxb.JaxbXmlFormatMapper]
+2023-05-05 23:03:29 - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-05 23:03:29 - HHH000206: hibernate.properties not found
+2023-05-05 23:03:29 - Initializing service [role=org.hibernate.engine.config.spi.ConfigurationService]
+2023-05-05 23:03:29 - Initializing service [role=org.hibernate.resource.beans.spi.ManagedBeanRegistry]
+2023-05-05 23:03:29 - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2023-05-05 23:03:29 - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2023-05-05 23:03:29 - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2023-05-05 23:03:29 - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2023-05-05 23:03:29 - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2023-05-05 23:03:29 - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2023-05-05 23:03:29 - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2023-05-05 23:03:29 - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2023-05-05 23:03:29 - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2023-05-05 23:03:29 - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2023-05-05 23:03:29 - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2023-05-05 23:03:29 - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2023-05-05 23:03:29 - Initializing service [role=org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider]
+2023-05-05 23:03:29 - Initializing service [role=org.hibernate.cache.spi.RegionFactory]
+2023-05-05 23:03:29 - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+2023-05-05 23:03:29 - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2023-05-05 23:03:29 - addDescriptor(FloatTypeDescriptor) replaced previous registration(DoubleTypeDescriptor)
+2023-05-05 23:03:29 - Adding type registration boolean -> org.hibernate.type.BasicTypeReference@7f426ddd
+2023-05-05 23:03:29 - Adding type registration boolean -> org.hibernate.type.BasicTypeReference@7f426ddd
+2023-05-05 23:03:29 - Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@7f426ddd
+2023-05-05 23:03:29 - Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@28e7bb31
+2023-05-05 23:03:29 - Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@28e7bb31
+2023-05-05 23:03:29 - Adding type registration true_false -> org.hibernate.type.BasicTypeReference@6fe04f2a
+2023-05-05 23:03:29 - Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@6fe04f2a
+2023-05-05 23:03:29 - Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@1f758e4f
+2023-05-05 23:03:29 - Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@1f758e4f
+2023-05-05 23:03:29 - Adding type registration byte -> org.hibernate.type.BasicTypeReference@733534f9
+2023-05-05 23:03:29 - Adding type registration byte -> org.hibernate.type.BasicTypeReference@733534f9
+2023-05-05 23:03:29 - Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@733534f9
+2023-05-05 23:03:29 - Adding type registration binary -> org.hibernate.type.BasicTypeReference@661e279d
+2023-05-05 23:03:29 - Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@661e279d
+2023-05-05 23:03:29 - Adding type registration [B -> org.hibernate.type.BasicTypeReference@661e279d
+2023-05-05 23:03:29 - Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@beabd6b
+2023-05-05 23:03:29 - Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@beabd6b
+2023-05-05 23:03:29 - Adding type registration Byte[] -> org.hibernate.type.BasicTypeReference@beabd6b
+2023-05-05 23:03:29 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.BasicTypeReference@beabd6b
+2023-05-05 23:03:29 - Adding type registration image -> org.hibernate.type.BasicTypeReference@38de5daf
+2023-05-05 23:03:29 - Adding type registration blob -> org.hibernate.type.BasicTypeReference@621624b1
+2023-05-05 23:03:29 - Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@621624b1
+2023-05-05 23:03:29 - Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@7523d5a1
+2023-05-05 23:03:29 - Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@2bfc2f8b
+2023-05-05 23:03:29 - Adding type registration short -> org.hibernate.type.BasicTypeReference@61853c7e
+2023-05-05 23:03:29 - Adding type registration short -> org.hibernate.type.BasicTypeReference@61853c7e
+2023-05-05 23:03:29 - Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@61853c7e
+2023-05-05 23:03:29 - Adding type registration integer -> org.hibernate.type.BasicTypeReference@32e5af53
+2023-05-05 23:03:29 - Adding type registration int -> org.hibernate.type.BasicTypeReference@32e5af53
+2023-05-05 23:03:29 - Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@32e5af53
+2023-05-05 23:03:29 - Adding type registration long -> org.hibernate.type.BasicTypeReference@5980fa73
+2023-05-05 23:03:29 - Adding type registration long -> org.hibernate.type.BasicTypeReference@5980fa73
+2023-05-05 23:03:29 - Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@5980fa73
+2023-05-05 23:03:29 - Adding type registration float -> org.hibernate.type.BasicTypeReference@13ca16bf
+2023-05-05 23:03:29 - Adding type registration float -> org.hibernate.type.BasicTypeReference@13ca16bf
+2023-05-05 23:03:29 - Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@13ca16bf
+2023-05-05 23:03:29 - Adding type registration double -> org.hibernate.type.BasicTypeReference@5be4be74
+2023-05-05 23:03:29 - Adding type registration double -> org.hibernate.type.BasicTypeReference@5be4be74
+2023-05-05 23:03:29 - Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@5be4be74
+2023-05-05 23:03:29 - Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@44641d6c
+2023-05-05 23:03:29 - Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@44641d6c
+2023-05-05 23:03:29 - Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@1ae924f1
+2023-05-05 23:03:29 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@1ae924f1
+2023-05-05 23:03:29 - Adding type registration character -> org.hibernate.type.BasicTypeReference@59d5a6fd
+2023-05-05 23:03:29 - Adding type registration char -> org.hibernate.type.BasicTypeReference@59d5a6fd
+2023-05-05 23:03:29 - Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@59d5a6fd
+2023-05-05 23:03:29 - Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@27bcb4ad
+2023-05-05 23:03:29 - Adding type registration string -> org.hibernate.type.BasicTypeReference@4357524b
+2023-05-05 23:03:29 - Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@4357524b
+2023-05-05 23:03:29 - Adding type registration nstring -> org.hibernate.type.BasicTypeReference@104a287c
+2023-05-05 23:03:29 - Adding type registration characters -> org.hibernate.type.BasicTypeReference@64dc86c6
+2023-05-05 23:03:29 - Adding type registration char[] -> org.hibernate.type.BasicTypeReference@64dc86c6
+2023-05-05 23:03:29 - Adding type registration [C -> org.hibernate.type.BasicTypeReference@64dc86c6
+2023-05-05 23:03:29 - Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@26874f2c
+2023-05-05 23:03:29 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.BasicTypeReference@26874f2c
+2023-05-05 23:03:29 - Adding type registration Character[] -> org.hibernate.type.BasicTypeReference@26874f2c
+2023-05-05 23:03:29 - Adding type registration text -> org.hibernate.type.BasicTypeReference@5f3b84bd
+2023-05-05 23:03:29 - Adding type registration ntext -> org.hibernate.type.BasicTypeReference@1e734eee
+2023-05-05 23:03:29 - Adding type registration clob -> org.hibernate.type.BasicTypeReference@1e191150
+2023-05-05 23:03:29 - Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@1e191150
+2023-05-05 23:03:29 - Adding type registration nclob -> org.hibernate.type.BasicTypeReference@2fbd390
+2023-05-05 23:03:29 - Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@2fbd390
+2023-05-05 23:03:29 - Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@166b11e
+2023-05-05 23:03:29 - Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@5e68be2
+2023-05-05 23:03:29 - Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@5323999f
+2023-05-05 23:03:29 - Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@f18b738
+2023-05-05 23:03:29 - Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@3bc20984
+2023-05-05 23:03:29 - Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@aca3c85
+2023-05-05 23:03:29 - Adding type registration Duration -> org.hibernate.type.BasicTypeReference@45eab322
+2023-05-05 23:03:29 - Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@45eab322
+2023-05-05 23:03:29 - Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@f017dd0
+2023-05-05 23:03:29 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@f017dd0
+2023-05-05 23:03:29 - Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@2424cb9d
+2023-05-05 23:03:29 - Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@2424cb9d
+2023-05-05 23:03:29 - Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@7f51f588
+2023-05-05 23:03:29 - Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@7f51f588
+2023-05-05 23:03:29 - Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@6fb22ae3
+2023-05-05 23:03:29 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@6fb22ae3
+2023-05-05 23:03:29 - Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@6bd92538
+2023-05-05 23:03:29 - Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@69a373fd
+2023-05-05 23:03:29 - Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@19ae36f4
+2023-05-05 23:03:29 - Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@19ae36f4
+2023-05-05 23:03:29 - Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@6735f210
+2023-05-05 23:03:29 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@6735f210
+2023-05-05 23:03:29 - Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@4567fb2b
+2023-05-05 23:03:29 - Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@372954e1
+2023-05-05 23:03:29 - Adding type registration date -> org.hibernate.type.BasicTypeReference@5fd8dd66
+2023-05-05 23:03:29 - Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@5fd8dd66
+2023-05-05 23:03:29 - Adding type registration time -> org.hibernate.type.BasicTypeReference@173511ff
+2023-05-05 23:03:29 - Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@173511ff
+2023-05-05 23:03:29 - Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@6df11e91
+2023-05-05 23:03:29 - Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@6df11e91
+2023-05-05 23:03:29 - Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@6df11e91
+2023-05-05 23:03:29 - Adding type registration calendar -> org.hibernate.type.BasicTypeReference@1002d192
+2023-05-05 23:03:29 - Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@1002d192
+2023-05-05 23:03:29 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@1002d192
+2023-05-05 23:03:29 - Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@9281d19
+2023-05-05 23:03:29 - Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@36ad5f2a
+2023-05-05 23:03:29 - Adding type registration instant -> org.hibernate.type.BasicTypeReference@53cddaf8
+2023-05-05 23:03:29 - Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@53cddaf8
+2023-05-05 23:03:29 - Adding type registration uuid -> org.hibernate.type.BasicTypeReference@55c50f52
+2023-05-05 23:03:29 - Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@55c50f52
+2023-05-05 23:03:29 - Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@55c50f52
+2023-05-05 23:03:29 - Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@1ccc1026
+2023-05-05 23:03:29 - Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@4044589a
+2023-05-05 23:03:29 - Adding type registration class -> org.hibernate.type.BasicTypeReference@7de35070
+2023-05-05 23:03:29 - Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@7de35070
+2023-05-05 23:03:29 - Adding type registration currency -> org.hibernate.type.BasicTypeReference@216f01
+2023-05-05 23:03:29 - Adding type registration Currency -> org.hibernate.type.BasicTypeReference@216f01
+2023-05-05 23:03:29 - Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@216f01
+2023-05-05 23:03:29 - Adding type registration locale -> org.hibernate.type.BasicTypeReference@7c901203
+2023-05-05 23:03:29 - Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@7c901203
+2023-05-05 23:03:29 - Adding type registration serializable -> org.hibernate.type.BasicTypeReference@1e721583
+2023-05-05 23:03:29 - Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@1e721583
+2023-05-05 23:03:29 - Adding type registration timezone -> org.hibernate.type.BasicTypeReference@79f5a6ed
+2023-05-05 23:03:29 - Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@79f5a6ed
+2023-05-05 23:03:29 - Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@722787b5
+2023-05-05 23:03:29 - Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@722787b5
+2023-05-05 23:03:29 - Adding type registration url -> org.hibernate.type.BasicTypeReference@edb83f8
+2023-05-05 23:03:29 - Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@edb83f8
+2023-05-05 23:03:29 - Adding type registration row_version -> org.hibernate.type.BasicTypeReference@8b41ad
+2023-05-05 23:03:29 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@394fb736
+2023-05-05 23:03:29 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@394fb736
+2023-05-05 23:03:29 - Adding type registration object -> org.hibernate.type.JavaObjectType@2049e582
+2023-05-05 23:03:29 - Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@2049e582
+2023-05-05 23:03:29 - Adding type registration null -> org.hibernate.type.NullType@b7d2d51
+2023-05-05 23:03:29 - Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@641ed324
+2023-05-05 23:03:29 - Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@45984654
+2023-05-05 23:03:29 - Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@4c5406b
+2023-05-05 23:03:29 - Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@66b0e207
+2023-05-05 23:03:29 - Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@74a58a06
+2023-05-05 23:03:29 - Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@7308c820
+2023-05-05 23:03:29 - Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@5d601832
+2023-05-05 23:03:29 - Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@3ca17943
+2023-05-05 23:03:29 - Initializing service [role=org.hibernate.boot.cfgxml.spi.CfgXmlAccessService]
+2023-05-05 23:03:29 - Injecting JPA temp ClassLoader [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@2755617b] into BootstrapContext; was [null]
+2023-05-05 23:03:29 - ClassLoaderAccessImpl#injectTempClassLoader(org.springframework.instrument.classloading.SimpleThrowawayClassLoader@2755617b) [was null]
+2023-05-05 23:03:29 - Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@c212536] into BootstrapContext; was [null]
+2023-05-05 23:03:29 - Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@7b377a53] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@1b0e031b]
+2023-05-05 23:03:29 - Injecting JPA temp ClassLoader [null] into BootstrapContext; was [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@2755617b]
+2023-05-05 23:03:29 - ClassLoaderAccessImpl#injectTempClassLoader(null) [was org.springframework.instrument.classloading.SimpleThrowawayClassLoader@2755617b]
+2023-05-05 23:03:29 - Initializing service [role=org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-05-05 23:03:29 - Initializing service [role=org.hibernate.engine.jdbc.dialect.spi.DialectFactory]
+2023-05-05 23:03:29 - Initializing service [role=org.hibernate.engine.jdbc.dialect.spi.DialectResolver]
+2023-05-05 23:03:29 - Initializing service [role=org.hibernate.engine.jdbc.connections.spi.ConnectionProvider]
+2023-05-05 23:03:29 - Initializing service [role=org.hibernate.engine.jndi.spi.JndiService]
+2023-05-05 23:03:29 - HikariPool-1 - Starting...
+2023-05-05 23:03:31 - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: FATAL: database "pharosdb" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2825)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:175)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:313)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+	at org.postgresql.Driver.makeConnection(Driver.java:443)
+	at org.postgresql.Driver.connect(Driver.java:297)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.pharos.PharosDBmapper.PharosDBmapperApplication.main(PharosDBmapperApplication.java:10)
+2023-05-05 23:03:31 - HHH000342: Could not obtain connection to query metadata
+org.postgresql.util.PSQLException: FATAL: database "pharosdb" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2825)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:175)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:313)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+	at org.postgresql.Driver.makeConnection(Driver.java:443)
+	at org.postgresql.Driver.connect(Driver.java:297)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.pharos.PharosDBmapper.PharosDBmapperApplication.main(PharosDBmapperApplication.java:10)
+2023-05-05 23:03:31 - Overriding existing service binding [org.hibernate.engine.jdbc.connections.spi.ConnectionProvider]
+2023-05-05 23:03:31 - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-05-05 23:03:31 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-05-05 23:03:31 - Stopping service [Tomcat]
+2023-05-05 23:03:31 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-05-05 23:03:31 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.pharos.PharosDBmapper.PharosDBmapperApplication.main(PharosDBmapperApplication.java:10)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:267)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 16 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:147)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:60)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:244)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	... 31 common frames omitted
