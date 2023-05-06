@@ -2,6 +2,7 @@ package com.pharos.PharosDBmapper.mappers;
 
 import com.pharos.PharosDBmapper.dto.AddressDTO;
 import com.pharos.PharosDBmapper.entities.Address;
+import com.pharos.PharosDBmapper.wrappers.request.AddressRequest;
 import com.pharos.PharosDBmapper.wrappers.response.AddressResponse;
 
 import org.springframework.stereotype.Component;
@@ -15,6 +16,11 @@ public class AddressMapper {
     public AddressDTO addressToDto(Address address){
         AddressDTO addressDTO = new AddressDTO();
         return addressDTO;
+    }
+
+    public Address addressRequestToAddress(AddressRequest addressRequest){
+        Address address = new Address();
+        return address;
     }
 
     public Address dtoToAddress(AddressDTO addressDTO){

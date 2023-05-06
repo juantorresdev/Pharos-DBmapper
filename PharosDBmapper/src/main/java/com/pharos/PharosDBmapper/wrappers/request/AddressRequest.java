@@ -1,4 +1,4 @@
-package com.pharos.PharosDBmapper.wrappers.response;
+package com.pharos.PharosDBmapper.wrappers.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,14 +11,11 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class AddressResponse {
-    
-    private Integer id;
+public class AddressRequest {
     private String street;
     private String city;
     private String province;
     private String postcode;
     private String country;
     private String status;
-
 }
