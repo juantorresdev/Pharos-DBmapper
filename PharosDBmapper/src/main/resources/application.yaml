@@ -6,12 +6,12 @@ spring:
     name: PharosDBMapper
   datasource:
     url: jdbc:postgresql://localhost:5432/pharosdb
-    username: pharos-root-user
-    password: bx$dqQrzm7#1yB-JMCUf
+    username: username
+    password: password
     driverClassName: org.postgresql.Driver
   jpa:
     hibernate:
-      ddlAuto: create-drop
+      ddlAuto: create
     showSql: true
     properties:
       hibernate:

@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/v1/password")
 @Slf4j
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 public class PasswordHistoryController {
 
-    public final PasswordHistoryService passwordHistoryService;
+    //public final PasswordHistoryService passwordHistoryService;
 }
