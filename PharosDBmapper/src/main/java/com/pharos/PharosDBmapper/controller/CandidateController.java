@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1/candidate")
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @Slf4j
 public class CandidateController {
 
-    private final CandidateService candidateService;
+    //private final CandidateService candidateService;
 }

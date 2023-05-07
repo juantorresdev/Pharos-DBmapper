@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1/nationality")
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @Slf4j
 public class NationalityController {
 
-    private final NationalityService nationalityService;
+    //private final NationalityService nationalityService;
 
 }

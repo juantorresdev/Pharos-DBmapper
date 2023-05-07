@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1/gender")
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @Slf4j
 public class GenderController {
 
-    private final GenderRepository genderRepository;
+    //private final GenderRepository genderRepository;
 }

@@ -9,3 +9,9 @@
 
 #Idea
 .idea
+
+#VSCode 
+.vscode/
+
+#Logs
+/logs/*
