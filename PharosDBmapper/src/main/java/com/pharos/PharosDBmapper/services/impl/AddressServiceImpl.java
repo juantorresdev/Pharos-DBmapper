@@ -1,6 +1,5 @@
 package com.pharos.PharosDBmapper.services.impl;
 
-import com.pharos.PharosDBmapper.dto.AddressDTO;
 import com.pharos.PharosDBmapper.entities.Address;
 import com.pharos.PharosDBmapper.mappers.AddressMapper;
 import com.pharos.PharosDBmapper.repository.AddressRepository;

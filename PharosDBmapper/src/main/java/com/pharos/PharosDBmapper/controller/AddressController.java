@@ -13,6 +13,9 @@ import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.ResponseEntity.BodyBuilder;
+
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -65,6 +68,23 @@ public class AddressController {
             bodyBuilder = ResponseEntity.status(HttpStatus.NOT_FOUND);
         }
         return bodyBuilder.body(pharosDBMapperResponse);
+
+    }
+
+    @PostMapping("/getAddressList")
+    public ResponseEntity<PharosDBMapperResponse> getAddressList(@RequestBody AddressRequest addressRequest){
+
+        log.info("Accessed to /api/v1/address/getAddressList endpoint");
+        PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
+
+        try {
+            List<AddressResponse> addressResponse = addressService.readAddressList(addressRequest);
+            pharosDBMapperResponse.setData(addressResponse);
+            
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
 
     }
 
