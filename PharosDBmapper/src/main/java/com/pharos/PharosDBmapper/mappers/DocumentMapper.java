@@ -5,15 +5,18 @@ import com.pharos.PharosDBmapper.entities.Document;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class DocumentMapper {
 
+    private final ModelMapper modelMapper;
+
     public DocumentDTO documentToDto(Document document){
-        DocumentDTO documentDTO = new DocumentDTO();
+        DocumentDTO documentDTO = modelMapper.map(document, DocumentDTO.class);
         return documentDTO;
     }
 
     public Document dtoToDocument(DocumentDTO documentDTO){
-        Document document = new Document();
+        Document document = modelMapper.map(documentDTO, do);
         return document;
     }
 }
