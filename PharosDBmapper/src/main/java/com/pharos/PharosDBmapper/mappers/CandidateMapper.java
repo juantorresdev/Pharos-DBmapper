@@ -5,15 +5,18 @@ import com.pharos.PharosDBmapper.entities.Candidate;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class CandidateMapper {
 
+    private final ModelMapper modelMapper;
+
     public CandidateDTO candidateToDto(Candidate candidate){
-        CandidateDTO candidateDTO = new CandidateDTO();
+        CandidateDTO candidateDTO = modelMapper.map(candidate, Candidate.class);
         return candidateDTO;
     }
 
     public Candidate dtoToCandidate(CandidateDTO candidateDTO){
-        Candidate candidate = new Candidate();
+        Candidate candidate = modelMapper.map(candidateDTO, Candidate)
         return candidate;
     }
 }

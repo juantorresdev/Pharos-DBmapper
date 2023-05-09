@@ -5,7 +5,10 @@ import com.pharos.PharosDBmapper.entities.PasswordHistory;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class PasswordHistoryMapper {
+
+    private final ModelMapper modelMapper;
 
     public PasswordHistoryDTO passwordHistoryToDto(PasswordHistory passwordHistory){
         PasswordHistoryDTO passwordHistoryDTO = new PasswordHistoryDTO();

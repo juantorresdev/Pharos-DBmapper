@@ -5,7 +5,10 @@ import com.pharos.PharosDBmapper.entities.Nationality;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class NationalityMapper {
+
+    private final ModelMapper modelMapper;
 
     public NationalityDTO nationalityToDto(Nationality nationality){
         NationalityDTO nationalityDTO = new NationalityDTO();
