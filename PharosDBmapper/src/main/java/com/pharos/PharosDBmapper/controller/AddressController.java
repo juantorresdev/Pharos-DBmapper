@@ -1,12 +1,7 @@
 package com.pharos.PharosDBmapper.controller;
 
-import com.pharos.PharosDBmapper.dto.AddressDTO;
-import com.pharos.PharosDBmapper.entities.Address;
 import com.pharos.PharosDBmapper.services.AddressService;
-import com.pharos.PharosDBmapper.services.NationalityService;
-import com.pharos.PharosDBmapper.services.impl.AddressServiceImpl;
 
-import lombok.AllArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,8 +12,10 @@ import org.springframework.http.ResponseEntity.BodyBuilder;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -79,6 +76,40 @@ public class AddressController {
 
         try {
             List<AddressResponse> addressResponse = addressService.readAddressList(addressRequest);
+            pharosDBMapperResponse.setData(addressResponse);
+            
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
+
+    }
+
+    @PutMapping("/updateAddress")
+    public ResponseEntity<PharosDBMapperResponse> updateAddress(@RequestBody AddressRequest addressRequest){
+
+        log.info("Accessed to /api/v1/address/updateAddress endpoint");
+        PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
+
+        try {
+            AddressResponse addressResponse = addressService.updateAddress(addressRequest);
+            pharosDBMapperResponse.setData(addressResponse);
+            
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
+
+    }
+
+    @DeleteMapping("/deleteAddress")
+    public ResponseEntity<PharosDBMapperResponse> deleteAddress(@RequestBody AddressRequest addressRequest){
+
+        log.info("Accessed to /api/v1/address/updateAddress endpoint");
+        PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
+
+        try {
+            AddressResponse addressResponse = addressService.deleteAddress(addressRequest);
             pharosDBMapperResponse.setData(addressResponse);
             
         } catch (Exception e) {
