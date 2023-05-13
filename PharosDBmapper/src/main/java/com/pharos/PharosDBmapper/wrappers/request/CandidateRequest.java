@@ -1,5 +1,7 @@
 package com.pharos.PharosDBmapper.wrappers.request;
 
+import java.util.Date;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,12 +13,11 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class AddressRequest {
-    private int id;
-    private String street;
-    private String city;
-    private String province;
-    private String postcode;
-    private String country;
-    private String status;
+public class CandidateRequest {
+    private String pharosId;
+    private String name;
+    private String lastname;
+    private Date birthdate;
+    private String email;
+    private String phone;
 }
