@@ -31,7 +31,6 @@ import com.pharos.PharosDBmapper.wrappers.request.AddressRequest;
 @Slf4j
 public class AddressController {
 
-    @NonNull
     private final AddressService addressService;
     
     @PostMapping("/createAddress")
