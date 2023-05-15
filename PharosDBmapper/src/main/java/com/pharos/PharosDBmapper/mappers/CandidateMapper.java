@@ -2,6 +2,11 @@ package com.pharos.PharosDBmapper.mappers;
 
 import com.pharos.PharosDBmapper.dto.CandidateDTO;
 import com.pharos.PharosDBmapper.entities.Candidate;
+import com.pharos.PharosDBmapper.wrappers.request.CandidateRequest;
+
+import lombok.RequiredArgsConstructor;
+
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -11,12 +16,14 @@ public class CandidateMapper {
     private final ModelMapper modelMapper;
 
     public CandidateDTO candidateToDto(Candidate candidate){
-        CandidateDTO candidateDTO = modelMapper.map(candidate, Candidate.class);
-        return candidateDTO;
+        return modelMapper.map(candidate, CandidateDTO.class);
+    }
+
+    public Candidate candidateRequestToCandidate(CandidateRequest candidateRequest){
+        return modelMapper.map(candidateRequest, Candidate.class);
     }
 
     public Candidate dtoToCandidate(CandidateDTO candidateDTO){
-        Candidate candidate = modelMapper.map(candidateDTO, Candidate)
-        return candidate;
+        return modelMapper.map(candidateDTO, Candidate.class);
     }
 }
