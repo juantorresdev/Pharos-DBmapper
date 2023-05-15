@@ -6,6 +6,8 @@ import com.pharos.PharosDBmapper.wrappers.request.CandidateRequest;
 
 import lombok.RequiredArgsConstructor;
 
+import java.util.List;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
@@ -25,5 +27,9 @@ public class CandidateMapper {
 
     public Candidate dtoToCandidate(CandidateDTO candidateDTO){
         return modelMapper.map(candidateDTO, Candidate.class);
+    }
+
+    public List<CandidateDTO> candidateListToDtoList(List<Candidate> candidateList){
+        
     }
 }

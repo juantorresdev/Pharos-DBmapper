@@ -3,6 +3,8 @@ package com.pharos.PharosDBmapper.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.ResponseEntity.BodyBuilder;
@@ -47,16 +49,32 @@ public class CandidateController {
 
         log.info("Accessed to /api/v1/candidate/getCandidate endpoint");
         PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
-        BodyBuilder bodyBuilder;
 
         try {
             CandidateResponse candidateResponse = candidateService.getCandidate(candidateId);
-            bodyBuilder = ResponseEntity.status(HttpStatus.OK);
+            pharosDBMapperResponse.setData(candidateResponse);
         } catch (Exception e) {
-            bodyBuilder = ResponseEntity.status(HttpStatus.NOT_FOUND);
+            return ResponseEntity.notFound().build();
         }
-        return bodyBuilder.body(pharosDBMapperResponse);
+        return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
 
     }
+
+    @PostMapping(value="/getCandidateList")
+    public ResponseEntity<PharosDBMapperResponse> postMethodName(@RequestBody CandidateRequest candidateRequest) {
+        
+        log.info("Accessed to /api/v1/candidate/getCandidateList endpoint");
+        PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
+
+        try {
+            List<CandidateResponse> candidatesResponse = candidateService.getCandidateList(candidateRequest);
+            pharosDBMapperResponse.setData(candidatesResponse);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+        
+        return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
+    }
+    
 
 }

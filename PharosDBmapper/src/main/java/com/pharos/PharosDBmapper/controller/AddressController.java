@@ -1,17 +1,12 @@
 package com.pharos.PharosDBmapper.controller;
 
-import com.pharos.PharosDBmapper.services.AddressService;
-
-import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-
-import org.springframework.http.ResponseEntity;
-import org.springframework.http.ResponseEntity.BodyBuilder;
 
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.pharos.PharosDBmapper.services.AddressService;
 import com.pharos.PharosDBmapper.wrappers.response.PharosDBMapperResponse;
 import com.pharos.PharosDBmapper.wrappers.response.AddressResponse;
 import com.pharos.PharosDBmapper.wrappers.request.AddressRequest;
@@ -55,16 +51,14 @@ public class AddressController {
 
         log.info("Accessed to /api/v1/address/getAddress endpoint");
         PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
-        BodyBuilder bodyBuilder;
 
         try {
             AddressResponse addressResponse = addressService.getAddress(addressId);
             pharosDBMapperResponse.setData(addressResponse);
-            bodyBuilder = ResponseEntity.status(HttpStatus.OK);
         } catch (Exception e) {
-            bodyBuilder = ResponseEntity.status(HttpStatus.NOT_FOUND);
+            return ResponseEntity.notFound().build();
         }
-        return bodyBuilder.body(pharosDBMapperResponse);
+        return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
 
     }
 
