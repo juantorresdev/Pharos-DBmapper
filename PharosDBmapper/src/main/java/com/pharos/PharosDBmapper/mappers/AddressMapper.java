@@ -20,18 +20,15 @@ public class AddressMapper {
     private final ModelMapper modelMapper;
 
     public AddressDTO addressToDto(Address address){
-        AddressDTO addressDTO = modelMapper.map(address, AddressDTO.class);
-        return addressDTO;
+        return modelMapper.map(address, AddressDTO.class);
     }
 
     public Address addressRequestToAddress(AddressRequest addressRequest){
-        Address address = modelMapper.map(addressRequest, Address.class);
-        return address;
+        return modelMapper.map(addressRequest, Address.class);
     }
 
     public Address dtoToAddress(AddressDTO addressDTO){
-        Address address = modelMapper.map(addressDTO, Address.class);
-        return address;
+        return modelMapper.map(addressDTO, Address.class);
     }
 
     public List<AddressDTO> addressListoToDtoList(List<Address> addressList){

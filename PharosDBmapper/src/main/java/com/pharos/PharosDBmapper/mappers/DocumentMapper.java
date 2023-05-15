@@ -2,6 +2,10 @@ package com.pharos.PharosDBmapper.mappers;
 
 import com.pharos.PharosDBmapper.dto.DocumentDTO;
 import com.pharos.PharosDBmapper.entities.Document;
+
+import lombok.RequiredArgsConstructor;
+
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -11,12 +15,10 @@ public class DocumentMapper {
     private final ModelMapper modelMapper;
 
     public DocumentDTO documentToDto(Document document){
-        DocumentDTO documentDTO = modelMapper.map(document, DocumentDTO.class);
-        return documentDTO;
+        return modelMapper.map(document, DocumentDTO.class);
     }
 
     public Document dtoToDocument(DocumentDTO documentDTO){
-        Document document = modelMapper.map(documentDTO, do);
-        return document;
+        return modelMapper.map(documentDTO, Document.class);
     }
 }
