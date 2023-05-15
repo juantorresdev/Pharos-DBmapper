@@ -58,7 +58,8 @@ public class AddressController {
         BodyBuilder bodyBuilder;
 
         try {
-            AddressResponse addressResponse = addressService.readAddress(addressId);
+            AddressResponse addressResponse = addressService.getAddress(addressId);
+            pharosDBMapperResponse.setData(addressResponse);
             bodyBuilder = ResponseEntity.status(HttpStatus.OK);
         } catch (Exception e) {
             bodyBuilder = ResponseEntity.status(HttpStatus.NOT_FOUND);
@@ -74,7 +75,7 @@ public class AddressController {
         PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
 
         try {
-            List<AddressResponse> addressResponse = addressService.readAddressList(addressRequest);
+            List<AddressResponse> addressResponse = addressService.getAddressList(addressRequest);
             pharosDBMapperResponse.setData(addressResponse);
             
         } catch (Exception e) {
