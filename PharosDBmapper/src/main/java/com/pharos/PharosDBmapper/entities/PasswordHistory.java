@@ -28,6 +28,11 @@ public class PasswordHistory {
     @Column(name = "PASSWORD", nullable = false, length = 100)
     private String password;
 
+    @Size(max = 5)
+    @NotNull
+    @Column(name = "ENABLE", nullable = false, length = 5)
+    private String enable;
+
     @OneToMany(mappedBy = "passwordHistory")
     private Set<Candidate> candidates = new LinkedHashSet<>();
 
