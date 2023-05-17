@@ -10,8 +10,8 @@ import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 @RequiredArgsConstructor
@@ -32,17 +32,18 @@ public class AddressMapper {
     }
 
     public List<AddressDTO> addressListoToDtoList(List<Address> addressList){
-        List<AddressDTO> addressDTOList = new ArrayList<>();
-        return addressDTOList;
+        return addressList.stream()
+        .map(address -> modelMapper.map(address, AddressDTO.class))
+        .collect(Collectors.toList());
     }
 
     public AddressResponse addressToResponse(Address address){
-        AddressResponse addressResponse = new AddressResponse();
-        return addressResponse;
+        return modelMapper.map(address, AddressResponse.class);
     }
 
     public List<AddressResponse> addressListoToResponseList(List<Address> addressList){
-        List<AddressResponse> addressDTOList = new ArrayList<>();
-        return addressDTOList;
+        return addressList.stream()
+        .map(address -> modelMapper.map(address, AddressResponse.class))
+        .collect(Collectors.toList());
     }
 }
