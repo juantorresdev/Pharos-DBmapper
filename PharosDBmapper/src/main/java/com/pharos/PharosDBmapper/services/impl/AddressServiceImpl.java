@@ -24,7 +24,7 @@ public class AddressServiceImpl implements AddressService {
     @Override
     public AddressResponse createAddress(AddressRequest addressRequest) throws Exception {
 
-        log.info("Accessed to createAddress service - createAddress");
+        log.info("Accessed to Address service - createAddress");
 
         Address address = addressMapper.addressRequestToAddress(addressRequest);
         addressRepository.save(address);
@@ -35,7 +35,7 @@ public class AddressServiceImpl implements AddressService {
     @Override
     public AddressResponse getAddress(int addressId) throws Exception {
 
-        log.info("Accessed to createAddress service - getAddress");
+        log.info("Accessed to Address service - getAddress");
         Address address = addressRepository.findById(addressId).orElseThrow();
 
         return addressMapper.addressToResponse(address);
@@ -46,7 +46,7 @@ public class AddressServiceImpl implements AddressService {
     @Override
     public List<AddressResponse> getAddressList(AddressRequest addressRequest) throws Exception {
 
-        log.info("Accessed to createAddress service - getAddressList");
+        log.info("Accessed to Address service - getAddressList");
         List<Address> addressList = addressRepository.findAll();
 
         // TODO - Implement pagenation
@@ -55,7 +55,7 @@ public class AddressServiceImpl implements AddressService {
 
     @Override
     public AddressResponse updateAddress(AddressRequest addressRequest) throws Exception {
-        log.info("Accessed to createAddress service - updateAddress");
+        log.info("Accessed to Address service - updateAddress");
 
         //Address address = ((AddressService) addressRepository).updateAddress(addressMapper.addressRequestToAddress(addressRequest));
 
@@ -64,7 +64,8 @@ public class AddressServiceImpl implements AddressService {
 
     @Override
     public AddressResponse deleteAddress(AddressRequest addressRequest) throws Exception {
-        log.info("Accessed to createAddress service - deleteAddress");
+        
+        log.info("Accessed to Address service - deleteAddress");
 
         //Address address = addressRepository.deleteById(addressRequest.getId());
         return null;
