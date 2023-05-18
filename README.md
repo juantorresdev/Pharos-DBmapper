@@ -11,12 +11,12 @@ docker-compose up
 
 2. Create a Maven Configuration with the command:
 ```bash
-   mvn spring-boot:run -Dspring-boot.run.profiles=dev
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
 ```
 
 3. Add the environment variables to the previously created profile:
 ```bash
-   - env=val
+- env=val
 ```
 4. Execute
 

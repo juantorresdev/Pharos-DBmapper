@@ -18,4 +18,7 @@
 /logs/*
 
 ### logs ###
-logs/
+logs/*
+
+### Maven ###
+.mvn
