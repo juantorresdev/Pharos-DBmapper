@@ -59,7 +59,8 @@ public class DocumentServiceImpl implements DocumentService{
     @Override
     public List<DocumentResponse> getDocumentList(DocumentRequest documentRequest) throws Exception {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getDocumentList'");
+        throw new UnsupportedOperationException("
+        Unimplemented method 'getDocumentList'");
     }
 
     @Override
