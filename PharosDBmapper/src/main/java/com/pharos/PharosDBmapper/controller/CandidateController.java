@@ -7,9 +7,9 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.ResponseEntity.BodyBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -60,8 +60,8 @@ public class CandidateController {
 
     }
 
-    @PostMapping(value="/getCandidateList")
-    public ResponseEntity<PharosDBMapperResponse> postMethodName(@RequestBody CandidateRequest candidateRequest) {
+    @PostMapping("/getCandidateList")
+    public ResponseEntity<PharosDBMapperResponse> getCandidateList(@RequestBody CandidateRequest candidateRequest) {
         
         log.info("Accessed to /api/v1/candidate/getCandidateList endpoint");
         PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
@@ -73,6 +73,21 @@ public class CandidateController {
             return ResponseEntity.notFound().build();
         }
         
+        return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
+    }
+
+    @PutMapping("updateCandidate")
+    public ResponseEntity<PharosDBMapperResponse> updateCandidate(@RequestBody CandidateRequest candidateRequest){
+
+        log.info("Accessed to /api/v1/candidate/updateCandidate endpoint");
+        PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
+        
+        try {
+            CandidateResponse candidateResponse = candidateService.updateCandidate(candidateRequest);
+            pharosDBMapperResponse.setData(candidateResponse);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
         return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
     }
     
