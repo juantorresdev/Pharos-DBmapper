@@ -40,4 +40,35 @@ public class DocumentController {
 
     }
 
+    @GetMapping("/getDocument")
+    public ResponseEntity<PharosDBMapperResponse> getDocument(@RequestParam("documentId") String documentId) {
+
+        log.info("Accessed to /api/v1/document/getDocument endpoint");
+        PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
+
+        try {
+            DocumentResponse documentResponse = documentService.getDocument(documentId);
+            pharosDBMapperResponse.setData(documentResponse);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
+
+    }
+
+    @PostMapping("/getDocumentList")
+    public ResponseEntity<PharosDBMapperResponse> getDocumentList(@RequestBody DocumentRequest documentRequest) {
+        
+        log.info("Accessed to /api/v1/candidate/getDocumentList endpoint");
+        PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
+
+        try {
+            List<DocumentResponse> documentResponse = documentService.getDocumentList(documentRequest);
+            pharosDBMapperResponse.setData(documentResponse);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+        
+        return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
+    }
 }
