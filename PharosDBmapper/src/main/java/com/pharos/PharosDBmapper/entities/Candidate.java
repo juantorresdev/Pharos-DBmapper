@@ -49,6 +49,11 @@ public class Candidate {
     @Column(name = "PHONE", nullable = false)
     private String phone;
 
+    @Size(max = 10)
+    @NotNull
+    @Column(name = "GENDER", nullable = false)
+    private String gender;
+
     @Size(max = 255)
     @NotNull
     @Column(name = "STATUS", nullable = false)
@@ -62,10 +67,6 @@ public class Candidate {
     @Size(max = 255)
     @Column(name = "ACTIVATIONCODE")
     private String activationcode;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "GENDER_ID")
-    private Gender gender;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "NATIONALITY_ID")
