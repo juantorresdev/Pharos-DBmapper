@@ -1,6 +1,5 @@
 package com.pharos.PharosDBmapper.dto;
 
-import com.pharos.PharosDBmapper.entities.Gender;
 import lombok.*;
 
 import java.util.Date;

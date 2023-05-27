@@ -2,7 +2,6 @@ package com.pharos.PharosDBmapper.controller;
 
 import com.pharos.PharosDBmapper.enums.ResponseMessagesEnum;
 import com.pharos.PharosDBmapper.services.DocumentService;
-import com.pharos.PharosDBmapper.services.NationalityService;
 import com.pharos.PharosDBmapper.wrappers.request.DocumentRequest;
 import com.pharos.PharosDBmapper.wrappers.response.DocumentResponse;
 import com.pharos.PharosDBmapper.wrappers.response.PharosDBMapperResponse;
