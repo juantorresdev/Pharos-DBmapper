@@ -39,4 +39,20 @@ public class PasswordHistoryController {
         return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
 
     }
+
+    @GetMapping("/getCurrentPassword")
+    public ResponseEntity<PharosDBMapperResponse> getCurrentPassword(@RequestParam("password") String password) {
+
+        log.info("Accessed to /api/v1/password/getCurrentPassword endpoint");
+        PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
+
+        try {
+            DocumentResponse passwordResponse = passwordHistoryService.getCurrentPassword(password);
+            pharosDBMapperResponse.setData(documentResponse);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
+
+    }
 }
