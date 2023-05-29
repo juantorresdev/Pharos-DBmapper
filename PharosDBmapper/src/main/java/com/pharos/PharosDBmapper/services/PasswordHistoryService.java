@@ -8,7 +8,7 @@ import com.pharos.PharosDBmapper.wrappers.response.PasswordHistoryResponse;
 public interface PasswordHistoryService {
 
     public PasswordHistoryResponse createPassword(PasswordHistoryRequest passwordHistoryRequest) throws Exception;
-    public PasswordHistoryResponse getPassword(int passwordId) throws Exception;
+    public PasswordHistoryResponse getCurrentPassword(String passwordId) throws Exception;
     public List<PasswordHistoryResponse> getPasswordList(PasswordHistoryRequest passwordHistoryRequest) throws Exception;
     public PasswordHistoryResponse updatePassword(PasswordHistoryRequest passwordHistoryRequest) throws Exception;
     public PasswordHistoryResponse deletePassword(PasswordHistoryRequest passwordHistoryRequest) throws Exception;
