@@ -61,20 +61,11 @@ mvn spring-boot:run -Dspring-boot.run.profiles=dev
 | /api/v1/document/updateCandidate     |     |      | x   |        | x  |
 | /api/v1/document/deleteCandidate     |     |      |     | x      | x  |
 
-### Gender ###
-| Endpoint                      | GET | POST | PUT | DELETE | 🔒 |
-|:------------------------------|:----|:-----|:----|:-------|:---|
-| /api/v1/gender/getGender      | x   |      |     |        | x  |
-| /api/v1/gender/getGenderList  |     | x    |     |        | x  |
-| /api/v1/gender/createGender   |     | x    |     |        | x  |
-| /api/v1/gender/updateGender   |     |      | x   |        | x  |
-| /api/v1/gender/deleteGender   |     |      |     | x      | x  |
-
-### Nationality ###
-| Endpoint                               | GET | POST | PUT | DELETE | 🔒 |
-|:---------------------------------------|:----|:-----|:----|:-------|:---|
-| /api/v1/nationality/getNationality     | x   |      |     |        | x  |
-| /api/v1/nationality/getNationality     |     | x    |     |        | x  |
-| /api/v1/nationality/createNationality  |     | x    |     |        | x  |
-| /api/v1/nationality/updateNationality  |     |      | x   |        | x  |
-| /api/v1/nationality/deleteNationality  |     |      |     | x      | x  |
+### Password ###
+| Endpoint                             | GET | POST | PUT | DELETE | 🔒 |
+|:-------------------------------------|:----|:-----|:----|:-------|:---|
+| /api/v1/password/getCurrentPassword  | x   |      |     |        | x  |
+| /api/v1/password/getCandidatesList   |     | x    |     |        | x  |
+| /api/v1/password/createPassword      |     | x    |     |        | x  |
+| /api/v1/password/updateCandidate     |     |      | x   |        | x  |
+| /api/v1/password/deleteCandidate     |     |      |     | x      | x  |
