@@ -55,6 +55,20 @@ public class PasswordHistoryController {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
-
     }
+
+    @PutmMapping("/resetPassword")
+    public ResponseEntity<PharosDBMapperResponse> resetPassword(@RequestBody PasswordHistoryRequest request){
+
+        log.info("Accessed to /api/v1/password/resetPassword endpoint");
+
+        try {
+            PasswordHistoryResponse passwordResponse = passwordHistoryService.getCurrentPassword(password);
+            pharosDBMapperResponse.setData(passwordResponse);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
+
+   }
 }
