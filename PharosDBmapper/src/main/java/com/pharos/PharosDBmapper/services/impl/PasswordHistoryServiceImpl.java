@@ -1,5 +1,7 @@
 package com.pharos.PharosDBmapper.services.impl;
 
+import com.pharos.PharosDBmapper.entities.PasswordHistory;
+import com.pharos.PharosDBmapper.mappers.PasswordHistoryMapper;
 import com.pharos.PharosDBmapper.repository.PasswordHistoryRepository;
 import com.pharos.PharosDBmapper.services.PasswordHistoryService;
 import com.pharos.PharosDBmapper.wrappers.request.PasswordHistoryRequest;
@@ -18,35 +20,63 @@ import org.springframework.stereotype.Service;
 public class PasswordHistoryServiceImpl implements PasswordHistoryService{
 
     private final PasswordHistoryRepository passwordHistoryRepository;
+    private final PasswordHistoryMapper historyMapper;
 
     @Override
     public PasswordHistoryResponse createPassword(PasswordHistoryRequest passwordHistoryRequest) throws Exception {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createPassword'");
+        
+        log.info("Accessed to PasswordHistory service - createPassword");
+
+        PasswordHistory passwordHistory = historyMapper.passwordRequestToPasswordHistory(passwordHistoryRequest);
+        passwordHistoryRepository.save(passwordHistory);
+
+        return historyMapper.passwordToResposnse(passwordHistory);
+        
     }
 
     @Override
-    public PasswordHistoryResponse getCurrentPassword(String passwordId) throws Exception {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getCurrentPassword'");
+    public PasswordHistoryResponse getCurrentPassword(PasswordHistoryRequest passwordHistoryRequest) throws Exception {
+        log.info("Accessed to PasswordHistory service - getCurrentPassword");
+
+        PasswordHistory passwordHistory = historyMapper.passwordRequestToPasswordHistory(passwordHistoryRequest);
+        passwordHistoryRepository.findById(passwordHistory.getId());
+
+
+        return historyMapper.passwordToResposnse(passwordHistory);
     }
 
     @Override
-    public List<PasswordHistoryResponse> getPasswordList(PasswordHistoryRequest passwordHistoryRequest)
-            throws Exception {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getPasswordList'");
+    public PasswordHistoryResponse resetPassword(PasswordHistoryRequest passwordHistoryRequest) throws Exception {
+        
+        log.info("Accessed to PasswordHistory service - resetPassword");
+
+        PasswordHistory passwordHistory = historyMapper.passwordRequestToPasswordHistory(passwordHistoryRequest);
+        passwordHistoryRepository.save(passwordHistory);
+
+
+        return historyMapper.passwordToResposnse(passwordHistory);
     }
 
     @Override
     public PasswordHistoryResponse updatePassword(PasswordHistoryRequest passwordHistoryRequest) throws Exception {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'updatePassword'");
+        log.info("Accessed to PasswordHistory service - updatePassword");
+
+        PasswordHistory passwordHistory = historyMapper.passwordRequestToPasswordHistory(passwordHistoryRequest);
+        passwordHistoryRepository.save(passwordHistory);
+
+
+        return historyMapper.passwordToResposnse(passwordHistory);
     }
 
     @Override
     public PasswordHistoryResponse deletePassword(PasswordHistoryRequest passwordHistoryRequest) throws Exception {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deletePassword'");
+        log.info("Accessed to PasswordHistory service - deletePassword");
+
+        PasswordHistory passwordHistory = historyMapper.passwordRequestToPasswordHistory(passwordHistoryRequest);
+        passwordHistoryRepository.save(passwordHistory);
+
+
+        return historyMapper.passwordToResposnse(passwordHistory);
     }
+
 }

@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -32,6 +33,14 @@ public class PasswordHistory {
     @NotNull
     @Column(name = "ENABLE", nullable = false, length = 5)
     private String enable;
+
+    @NotNull
+    @Column(name = "CREATION_DATE", nullable = false)
+    private Date creationDate;
+
+    @NotNull
+    @Column(name = "LATEST", nullable = false)
+    private Boolean isLatest;
 
     @OneToMany(mappedBy = "passwordHistory")
     private Set<Candidate> candidates = new LinkedHashSet<>();

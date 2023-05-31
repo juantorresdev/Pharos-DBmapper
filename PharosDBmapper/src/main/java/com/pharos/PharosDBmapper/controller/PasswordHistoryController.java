@@ -12,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -43,13 +44,13 @@ public class PasswordHistoryController {
     }
 
     @GetMapping("/getCurrentPassword")
-    public ResponseEntity<PharosDBMapperResponse> getCurrentPassword(@RequestParam("password") String password) {
+    public ResponseEntity<PharosDBMapperResponse> getCurrentPassword(@RequestBody PasswordHistoryRequest passwordRequest) {
 
         log.info("Accessed to /api/v1/password/getCurrentPassword endpoint");
         PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
 
         try {
-            PasswordHistoryResponse passwordResponse = passwordHistoryService.getCurrentPassword(password);
+            PasswordHistoryResponse passwordResponse = passwordHistoryService.getCurrentPassword(passwordRequest);
             pharosDBMapperResponse.setData(passwordResponse);
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
@@ -57,13 +58,14 @@ public class PasswordHistoryController {
         return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
     }
 
-    @PutmMapping("/resetPassword")
+    @PutMapping("/resetPassword")
     public ResponseEntity<PharosDBMapperResponse> resetPassword(@RequestBody PasswordHistoryRequest request){
 
         log.info("Accessed to /api/v1/password/resetPassword endpoint");
+        PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
 
         try {
-            PasswordHistoryResponse passwordResponse = passwordHistoryService.getCurrentPassword(password);
+            PasswordHistoryResponse passwordResponse = passwordHistoryService.resetPassword(request);
             pharosDBMapperResponse.setData(passwordResponse);
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
