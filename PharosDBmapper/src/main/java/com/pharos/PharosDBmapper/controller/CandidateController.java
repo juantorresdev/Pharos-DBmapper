@@ -29,6 +29,22 @@ public class CandidateController {
     private final CandidateService candidateService;
 
     @PostMapping("/createCandidate")
+    @Operation(
+        summary = "Create new candidate",
+        description = "Create new candidate"
+    )
+    @ApiResponse(
+        responseCode = "201",
+        description = "HTTP Status 201 OK"
+    )
+    @ApiResponse(
+            responseCode = "401",
+            description = "HTTP Status 401 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "500",
+            description = "HTTP Status 500"
+    )
     public ResponseEntity<PharosDBMapperResponse> createCandidate(@RequestBody CandidateRequest candidateRequest){
 
         log.info("Accessed to /api/v1/candidate/createCandidate endpoint");
@@ -45,6 +61,22 @@ public class CandidateController {
     }
 
     @GetMapping("/getCandidate")
+    @Operation(
+        summary = "Get candidate",
+        description = "Get candidate"
+    )
+    @ApiResponse(
+        responseCode = "200",
+        description = "HTTP Status 200 OK"
+    )
+    @ApiResponse(
+            responseCode = "401",
+            description = "HTTP Status 401 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "500",
+            description = "HTTP Status 500"
+    )
     public ResponseEntity<PharosDBMapperResponse> getCandidate(@RequestParam("candidateId") String candidateId) {
 
         log.info("Accessed to /api/v1/candidate/getCandidate endpoint");
@@ -61,6 +93,22 @@ public class CandidateController {
     }
 
     @PostMapping("/getCandidateList")
+    @Operation(
+        summary = "Get candidate list",
+        description = "Get candidate list"
+    )
+    @ApiResponse(
+        responseCode = "200",
+        description = "HTTP Status 200 OK"
+    )
+    @ApiResponse(
+            responseCode = "401",
+            description = "HTTP Status 401 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "500",
+            description = "HTTP Status 500"
+    )
     public ResponseEntity<PharosDBMapperResponse> getCandidateList(@RequestBody CandidateRequest candidateRequest) {
         
         log.info("Accessed to /api/v1/candidate/getCandidateList endpoint");
@@ -77,6 +125,22 @@ public class CandidateController {
     }
 
     @PutMapping("updateCandidate")
+    @Operation(
+        summary = "Update candidate",
+        description = "Update candidate"
+    )
+    @ApiResponse(
+        responseCode = "200",
+        description = "HTTP Status 200 OK"
+    )
+    @ApiResponse(
+            responseCode = "401",
+            description = "HTTP Status 401 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "500",
+            description = "HTTP Status 500"
+    )
     public ResponseEntity<PharosDBMapperResponse> updateCandidate(@RequestBody CandidateRequest candidateRequest){
 
         log.info("Accessed to /api/v1/candidate/updateCandidate endpoint");
@@ -91,5 +155,34 @@ public class CandidateController {
         return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
     }
     
+    @DeleteMapping("deleteCandidate")
+    @Operation(
+        summary = "Delete candidate",
+        description = "Delete candidate"
+    )
+    @ApiResponse(
+        responseCode = "200",
+        description = "HTTP Status 200 OK"
+    )
+    @ApiResponse(
+            responseCode = "401",
+            description = "HTTP Status 401 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "500",
+            description = "HTTP Status 500"
+    )
+    public ResponseEntity<PharosDBMapperResponse> deleteCandidate(@RequestBody CandidateRequest candidateRequest){
 
+        log.info("Accessed to /api/v1/candidate/deleteteCandidate endpoint");
+        PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
+        
+        try {
+            CandidateResponse candidateResponse = candidateService.deleteCandidate(candidateRequest);
+            pharosDBMapperResponse.setData(candidateResponse);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
+    }
 }
