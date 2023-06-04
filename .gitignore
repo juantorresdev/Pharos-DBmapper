@@ -15,6 +15,7 @@
 
 #Logs
 logs/*
+logs/spring-boot-logger.log
 
 ### Maven ###
 .mvn

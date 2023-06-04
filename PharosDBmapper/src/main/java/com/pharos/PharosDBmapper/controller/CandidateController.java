@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -19,6 +20,9 @@ import com.pharos.PharosDBmapper.services.CandidateService;
 import com.pharos.PharosDBmapper.wrappers.request.CandidateRequest;
 import com.pharos.PharosDBmapper.wrappers.response.CandidateResponse;
 import com.pharos.PharosDBmapper.wrappers.response.PharosDBMapperResponse;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 
 @RestController
 @RequestMapping("/api/v1/candidate")
