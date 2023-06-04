@@ -6,6 +6,8 @@ import com.pharos.PharosDBmapper.wrappers.request.DocumentRequest;
 import com.pharos.PharosDBmapper.wrappers.response.DocumentResponse;
 import com.pharos.PharosDBmapper.wrappers.response.PharosDBMapperResponse;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -31,6 +33,22 @@ public class DocumentController {
     private final DocumentService documentService;
 
     @PostMapping("/createDocument")
+    @Operation(
+        summary = "Create new document",
+        description = "Create new document"
+    )
+    @ApiResponse(
+        responseCode = "201",
+        description = "HTTP Status 201 OK"
+    )
+    @ApiResponse(
+            responseCode = "401",
+            description = "HTTP Status 401 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "500",
+            description = "HTTP Status 500"
+    )
     public ResponseEntity<PharosDBMapperResponse> createDocument(@RequestBody DocumentRequest documentRequest){
 
         log.info("Accessed to /api/v1/document/createDocument endpoint");
@@ -48,6 +66,22 @@ public class DocumentController {
     }
 
     @GetMapping("/getDocument")
+    @Operation(
+        summary = "Get document",
+        description = "Get document"
+    )
+    @ApiResponse(
+        responseCode = "200",
+        description = "HTTP Status 200 OK"
+    )
+    @ApiResponse(
+            responseCode = "401",
+            description = "HTTP Status 401 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "500",
+            description = "HTTP Status 500"
+    )
     public ResponseEntity<PharosDBMapperResponse> getDocument(@RequestParam("documentId") int documentId) {
 
         log.info("Accessed to /api/v1/document/getDocument endpoint");
@@ -64,6 +98,22 @@ public class DocumentController {
     }
 
     @PostMapping("/getDocumentList")
+    @Operation(
+        summary = "Get document",
+        description = "Get document"
+    )
+    @ApiResponse(
+        responseCode = "200",
+        description = "HTTP Status 200 OK"
+    )
+    @ApiResponse(
+            responseCode = "401",
+            description = "HTTP Status 401 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "500",
+            description = "HTTP Status 500"
+    )
     public ResponseEntity<PharosDBMapperResponse> getDocumentList(@RequestBody DocumentRequest documentRequest) {
         
         log.info("Accessed to /api/v1/document/getDocumentList endpoint");
@@ -80,6 +130,22 @@ public class DocumentController {
     }
 
     @PutMapping("/updateDocument")
+    @Operation(
+        summary = "Get document",
+        description = "Get document"
+    )
+    @ApiResponse(
+        responseCode = "200",
+        description = "HTTP Status 200 OK"
+    )
+    @ApiResponse(
+            responseCode = "401",
+            description = "HTTP Status 401 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "500",
+            description = "HTTP Status 500"
+    )
     public ResponseEntity<PharosDBMapperResponse> updateDocument(@RequestBody DocumentRequest documentRequest){
         log.info("Accessed to /api/v1/document/updateDocument");
         PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
@@ -96,6 +162,22 @@ public class DocumentController {
     }
 
     @DeleteMapping("/deleteDocument")
+    @Operation(
+        summary = "Get document",
+        description = "Get document"
+    )
+    @ApiResponse(
+        responseCode = "200",
+        description = "HTTP Status 200 OK"
+    )
+    @ApiResponse(
+            responseCode = "401",
+            description = "HTTP Status 401 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "500",
+            description = "HTTP Status 500"
+    )
     public ResponseEntity<PharosDBMapperResponse> deleteDocument(@RequestBody DocumentRequest documentRequest){
         log.info("Accessed to /api/v1/document/deleteDocument");
         PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
