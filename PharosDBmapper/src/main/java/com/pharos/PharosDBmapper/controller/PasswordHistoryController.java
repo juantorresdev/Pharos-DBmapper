@@ -5,6 +5,8 @@ import com.pharos.PharosDBmapper.wrappers.request.PasswordHistoryRequest;
 import com.pharos.PharosDBmapper.wrappers.response.PasswordHistoryResponse;
 import com.pharos.PharosDBmapper.wrappers.response.PharosDBMapperResponse;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -27,6 +29,22 @@ public class PasswordHistoryController {
     public final PasswordHistoryService passwordHistoryService;
 
     @PostMapping("/createPassword")
+    @Operation(
+        summary = "Create new password",
+        description = "Create new password"
+    )
+    @ApiResponse(
+        responseCode = "201",
+        description = "HTTP Status 201 OK"
+    )
+    @ApiResponse(
+            responseCode = "401",
+            description = "HTTP Status 401 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "500",
+            description = "HTTP Status 500"
+    )
     public ResponseEntity<PharosDBMapperResponse> createPassword(@RequestBody PasswordHistoryRequest passwordRequest){
 
         log.info("Accessed to /api/v1/password/createPassword endpoint");
@@ -44,6 +62,22 @@ public class PasswordHistoryController {
     }
 
     @GetMapping("/getCurrentPassword")
+    @Operation(
+        summary = "Get current password",
+        description = "Get current password"
+    )
+    @ApiResponse(
+        responseCode = "200",
+        description = "HTTP Status 200 OK"
+    )
+    @ApiResponse(
+            responseCode = "401",
+            description = "HTTP Status 401 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "500",
+            description = "HTTP Status 500"
+    )
     public ResponseEntity<PharosDBMapperResponse> getCurrentPassword(@RequestBody PasswordHistoryRequest passwordRequest) {
 
         log.info("Accessed to /api/v1/password/getCurrentPassword endpoint");
@@ -59,6 +93,22 @@ public class PasswordHistoryController {
     }
 
     @PutMapping("/resetPassword")
+    @Operation(
+        summary = "Reset current password",
+        description = "Reset current password"
+    )
+    @ApiResponse(
+        responseCode = "200",
+        description = "HTTP Status 200 OK"
+    )
+    @ApiResponse(
+            responseCode = "401",
+            description = "HTTP Status 401 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "500",
+            description = "HTTP Status 500"
+    )
     public ResponseEntity<PharosDBMapperResponse> resetPassword(@RequestBody PasswordHistoryRequest request){
 
         log.info("Accessed to /api/v1/password/resetPassword endpoint");
