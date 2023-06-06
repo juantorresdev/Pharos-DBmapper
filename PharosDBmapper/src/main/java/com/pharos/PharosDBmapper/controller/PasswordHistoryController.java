@@ -123,4 +123,36 @@ public class PasswordHistoryController {
         return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
 
    }
+
+   @PutMapping("/deletePassword")
+    @Operation(
+        summary = "Reset current password",
+        description = "Reset current password"
+    )
+    @ApiResponse(
+        responseCode = "200",
+        description = "HTTP Status 200 OK"
+    )
+    @ApiResponse(
+            responseCode = "401",
+            description = "HTTP Status 401 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "500",
+            description = "HTTP Status 500"
+    )
+    public ResponseEntity<PharosDBMapperResponse> deletePassword(@RequestBody PasswordHistoryRequest request){
+
+        log.info("Accessed to /api/v1/password/resetPassword endpoint");
+        PharosDBMapperResponse pharosDBMapperResponse = new PharosDBMapperResponse();
+
+        try {
+            PasswordHistoryResponse passwordResponse = passwordHistoryService.deletePassword(request);
+            pharosDBMapperResponse.setData(passwordResponse);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(pharosDBMapperResponse);
+
+   }
 }
