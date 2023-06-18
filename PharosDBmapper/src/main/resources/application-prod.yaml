@@ -1,0 +1,39 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: PharosDBMapper
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pharosdb
+    username: username
+    password: password
+    driverClassName: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddlAuto: create
+    showSql: true
+    properties:
+      hibernate:
+        format_sql: true
+      database: postgresql
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+logging:
+  level:
+    org:
+      springframework:
+        web: trace
+      hibernate: trace
+    com:
+      pharos:
+        dbconnector: trace
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:9990/eureka
+    instance:
+      hostname: localhost
